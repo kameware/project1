@@ -8,16 +8,22 @@
 
 #import "HRVideoPlay.h"
 #import "HRAppDelegate.h"
-
 @interface HRVideoPlay ()
-
+{
+    BOOL isportraitmode;
+}
 @end
 
 @implementation HRVideoPlay
 @synthesize moviePlayerController;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if ([[HRAppDelegate shareAppDelegate] isTall]) {
+        self = [super initWithNibName:[nibNameOrNil stringByAppendingString:@"_iphone5"] bundle:nibBundleOrNil];
+    }
+    else{
+        self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    }
     if (self) {
         // Custom initialization
     }
@@ -28,9 +34,11 @@
 	if(UIInterfaceOrientationIsLandscape(interfaceOrientation)){
 		self.ladscapeView.hidden=NO;
         [self setframeForLadscape];
+        isportraitmode=NO;
 	} else {
 		self.ladscapeView.hidden=YES;
         [self setframeForPortrait];
+        isportraitmode=YES;
 	}
 	return YES;
 }
@@ -40,9 +48,11 @@
     
     if(UIInterfaceOrientationIsLandscape(orientation)){
 		self.ladscapeView.hidden=NO;
+        isportraitmode=NO;
         [self setframeForLadscape];
 	} else {
 		self.ladscapeView.hidden=YES;
+        isportraitmode=YES;
         [self setframeForPortrait];
 	}
     
@@ -57,9 +67,11 @@
 	if(UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation])){
 		self.ladscapeView.hidden=NO;
         [self setframeForLadscape];
+        isportraitmode=NO;
 	} else {
 		self.ladscapeView.hidden=YES;
         [self setframeForPortrait];
+        isportraitmode=YES;
 	}
 }
 - (void)viewDidLoad
@@ -81,6 +93,11 @@
     NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
     moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
 //    [moviePlayerController.view setFrame:CGRectMake(38, 93, 246.5, 212)];
+    if (isportraitmode) {
+        [self setframeForPortrait];
+    }else{
+        [self setframeForLadscape];
+    }
     [self.view addSubview:moviePlayerController.view];
     moviePlayerController.controlStyle=MPMovieControlStyleEmbedded;
     [moviePlayerController play];
@@ -111,17 +128,17 @@
 -(void)setframeForPortrait
 {
     if ([[HRAppDelegate shareAppDelegate] isTall]) {
-        
+       [moviePlayerController.view setFrame:CGRectMake(38, 93, 246.5, 212)];         
     }else{
        [moviePlayerController.view setFrame:CGRectMake(38, 93, 246.5, 212)]; 
     }
 }
 -(void)setframeForLadscape
 {
-    if ([[HRAppDelegate shareAppDelegate] isTall]) {
-        
+    if (![[HRAppDelegate shareAppDelegate] isTall]) {
+     [moviePlayerController.view setFrame:CGRectMake(74.5, 64, 335, 209)];        
     }else{
-     [moviePlayerController.view setFrame:CGRectMake(75, 65, 335, 209)];
+     [moviePlayerController.view setFrame:CGRectMake(118.5, 64, 335, 209)];
     }
 }
 @end

@@ -30,6 +30,14 @@
 		0FADE9F71712FFA200FB3842 /* Screenshot-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FADE9F61712FFA200FB3842 /* Screenshot-1.png */; };
 		0FADE9F91712FFAD00FB3842 /* Screenshot-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FADE9F81712FFAD00FB3842 /* Screenshot-2.png */; };
 		0FADEA07171308CD00FB3842 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FADEA09171308CD00FB3842 /* Localizable.strings */; };
+		0FAF468D171449B20008C801 /* HRVideoPlay_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF468C171449B20008C801 /* HRVideoPlay_iphone5.xib */; };
+		0FAF4691171451090008C801 /* bg_table.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF468F171451080008C801 /* bg_table.png */; };
+		0FAF4692171451090008C801 /* bg_table@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4690171451090008C801 /* bg_table@2x.png */; };
+		0FAF4696171451310008C801 /* HRFactsCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FAF4694171451310008C801 /* HRFactsCategory.m */; };
+		0FAF4697171451310008C801 /* HRFactsCategory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4695171451310008C801 /* HRFactsCategory.xib */; };
+		0FAF4699171452070008C801 /* Screenshot-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4698171452070008C801 /* Screenshot-7.png */; };
+		0FAF46A8171461CE0008C801 /* bgHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF46A6171461CE0008C801 /* bgHeader.png */; };
+		0FAF46A9171461CE0008C801 /* bgHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF46A7171461CE0008C801 /* bgHeader@2x.png */; };
 		8CF830581713B51D00741090 /* THLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF830571713B51D00741090 /* THLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8CF8307B1713E03500741090 /* HRmyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8307A1713E03500741090 /* HRmyButton.m */; };
 		8CF830811713EDB300741090 /* HRChooseLangues_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF830801713EDB300741090 /* HRChooseLangues_iphone5.xib */; };
@@ -98,6 +106,15 @@
 		0FADEA08171308CD00FB3842 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0FADEA0A171308D100FB3842 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0FADEA0B171308D200FB3842 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0FAF468C171449B20008C801 /* HRVideoPlay_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRVideoPlay_iphone5.xib; sourceTree = "<group>"; };
+		0FAF468F171451080008C801 /* bg_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_table.png; sourceTree = "<group>"; };
+		0FAF4690171451090008C801 /* bg_table@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_table@2x.png"; sourceTree = "<group>"; };
+		0FAF4693171451300008C801 /* HRFactsCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRFactsCategory.h; sourceTree = "<group>"; };
+		0FAF4694171451310008C801 /* HRFactsCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRFactsCategory.m; sourceTree = "<group>"; };
+		0FAF4695171451310008C801 /* HRFactsCategory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRFactsCategory.xib; sourceTree = "<group>"; };
+		0FAF4698171452070008C801 /* Screenshot-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-7.png"; sourceTree = "<group>"; };
+		0FAF46A6171461CE0008C801 /* bgHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgHeader.png; sourceTree = "<group>"; };
+		0FAF46A7171461CE0008C801 /* bgHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgHeader@2x.png"; sourceTree = "<group>"; };
 		8CF830561713B51D00741090 /* THLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLabel.h; sourceTree = "<group>"; };
 		8CF830571713B51D00741090 /* THLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLabel.m; sourceTree = "<group>"; };
 		8CF830791713E03500741090 /* HRmyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRmyButton.h; sourceTree = "<group>"; };
@@ -256,6 +273,10 @@
 				8CF830A9171404ED00741090 /* HRVideoPlay.h */,
 				8CF830AA171404EE00741090 /* HRVideoPlay.m */,
 				8CF830AB171404EF00741090 /* HRVideoPlay.xib */,
+				0FAF468C171449B20008C801 /* HRVideoPlay_iphone5.xib */,
+				0FAF4693171451300008C801 /* HRFactsCategory.h */,
+				0FAF4694171451310008C801 /* HRFactsCategory.m */,
+				0FAF4695171451310008C801 /* HRFactsCategory.xib */,
 			);
 			path = Viewcontroller;
 			sourceTree = "<group>";
@@ -282,6 +303,10 @@
 		0FADE9D41712FC3600FB3842 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				0FAF46A6171461CE0008C801 /* bgHeader.png */,
+				0FAF46A7171461CE0008C801 /* bgHeader@2x.png */,
+				0FAF468F171451080008C801 /* bg_table.png */,
+				0FAF4690171451090008C801 /* bg_table@2x.png */,
 				8CF830C2171422DA00741090 /* bgScreenVideoLadscape.png */,
 				8CF830C3171422DC00741090 /* bgScreenVideoLadscape@2x.png */,
 				0FADE9F51712FF1600FB3842 /* test */,
@@ -319,6 +344,7 @@
 		0FADE9F51712FF1600FB3842 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				0FAF4698171452070008C801 /* Screenshot-7.png */,
 				8CF830AE1714054700741090 /* Screenshot-6a.png */,
 				8CF830AF1714054700741090 /* Screenshot-6b.png */,
 				8CF830A11713FCCA00741090 /* Screenshot-5.png */,
@@ -462,6 +488,13 @@
 				8CF830C11714202B00741090 /* bgAppLadscape@2x.png in Resources */,
 				8CF830C4171422DD00741090 /* bgScreenVideoLadscape.png in Resources */,
 				8CF830C5171422DD00741090 /* bgScreenVideoLadscape@2x.png in Resources */,
+				0FAF468D171449B20008C801 /* HRVideoPlay_iphone5.xib in Resources */,
+				0FAF4691171451090008C801 /* bg_table.png in Resources */,
+				0FAF4692171451090008C801 /* bg_table@2x.png in Resources */,
+				0FAF4697171451310008C801 /* HRFactsCategory.xib in Resources */,
+				0FAF4699171452070008C801 /* Screenshot-7.png in Resources */,
+				0FAF46A8171461CE0008C801 /* bgHeader.png in Resources */,
+				0FAF46A9171461CE0008C801 /* bgHeader@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +516,7 @@
 				8CF830AC171404F000741090 /* HRVideoPlay.m in Sources */,
 				8CF830B41714064500741090 /* HRBackgroundVideoView.m in Sources */,
 				8CF830BD1714169D00741090 /* UINavigationController+RotationIn_IOS6.m in Sources */,
+				0FAF4696171451310008C801 /* HRFactsCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

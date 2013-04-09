@@ -9,6 +9,7 @@
 #import "HRVideoFactsSection.h"
 #import "HRAppDelegate.h"
 #import "HRvideoCategory.h"
+#import "HRFactsCategory.h"
 @interface HRVideoFactsSection ()
 
 @end
@@ -61,6 +62,8 @@
 }
 
 - (IBAction)factsPress:(id)sender {
+    HRFactsCategory *hRFactsCategory=[[[HRFactsCategory alloc] initWithNibName:@"HRFactsCategory" bundle:nil] autorelease];
+    [self.navigationController pushViewController:hRFactsCategory animated:YES];
 }
 
 - (IBAction)backPress:(id)sender {

@@ -8,6 +8,7 @@
 
 #import "HRvideoCategory.h"
 #import "HRVideoPlay.h"
+#import "HRAppDelegate.h"
 @interface HRvideoCategory ()
 
 @end
@@ -16,7 +17,12 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if ([[HRAppDelegate shareAppDelegate] isTall]) {
+        self = [super initWithNibName:[nibNameOrNil stringByAppendingString:@"_iphone5"] bundle:nibBundleOrNil];
+    }
+    else{
+        self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    }
     if (self) {
         // Custom initialization
     }
