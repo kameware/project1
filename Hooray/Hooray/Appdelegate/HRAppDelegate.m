@@ -11,7 +11,7 @@
 #import "HRChooseLangues.h"
 
 @implementation HRAppDelegate
-
+@synthesize ncviewController;
 - (void)dealloc
 {
     [_window release];
@@ -39,7 +39,9 @@
     [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"en", nil] forKey:@"AppleLanguages"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     self.viewController = [[[HRChooseLangues alloc] initWithNibName:@"HRChooseLangues" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+    ncviewController=[[UINavigationController alloc] initWithRootViewController:self.viewController];
+    ncviewController.navigationBarHidden=YES;
+    self.window.rootViewController = self.ncviewController;
     [self.window makeKeyAndVisible];
     [self setAnimationSplash];
     return YES;
@@ -59,7 +61,7 @@
     frame.origin.y=-frame.size.height;
     //change time for screen 1
     [UIView animateWithDuration:1.5
-                          delay:4.0
+                          delay:1.0
                         options: UIViewAnimationCurveEaseOut
                      animations:^{
                          [imageView setFrame:frame];

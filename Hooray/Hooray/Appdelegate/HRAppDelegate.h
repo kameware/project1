@@ -15,6 +15,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) HRChooseLangues *viewController;
+@property (strong, nonatomic) UINavigationController *ncviewController;
 + (HRAppDelegate *)shareAppDelegate;
 - (BOOL)isTall;
 @end

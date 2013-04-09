@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HRmyButton.h"
+#import "THLabel.h"
 @interface HRChooseLangues : UIViewController
 
-@property (retain, nonatomic) IBOutlet UILabel *langugueLabel;
-@property (retain, nonatomic) IBOutlet UILabel *nameAppLabel;
+@property (retain, nonatomic) IBOutlet THLabel *langugueLabel;
+@property (retain, nonatomic) IBOutlet THLabel *nameAppLabel;
+@property (retain, nonatomic) IBOutlet HRmyButton *goBtn;
+@property (retain, nonatomic) IBOutlet UILabel *selectLangLabel;
+- (IBAction)goPress:(id)sender;
 @end
