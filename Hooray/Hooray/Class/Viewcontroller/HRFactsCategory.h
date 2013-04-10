@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "THLabel.h"
 @interface HRFactsCategory : UIViewController
-
+{
+    NSMutableArray *allKey;
+}
 @property (retain, nonatomic) IBOutlet UITableView *tableVIew;
+@property (retain, nonatomic) NSMutableDictionary *dictAnimals;
+- (IBAction)backPress:(id)sender;
 @end

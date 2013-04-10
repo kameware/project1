@@ -36,6 +36,15 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     [application setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     // Override point for customization after application launch.
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cacheDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [cacheDirectory stringByAppendingString:@"/Animal.plist"];
+    NSFileManager *fm = [[NSFileManager alloc] init];
+    if (![fm fileExistsAtPath:filePath]) {
+        [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"Animal" ofType:@"plist"] toPath:filePath error:nil];
+    }
+    [fm release];
+    NSLog(@"animal:%@",[[NSMutableDictionary alloc] initWithContentsOfFile:filePath]);
     [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"en", nil] forKey:@"AppleLanguages"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     self.viewController = [[[HRChooseLangues alloc] initWithNibName:@"HRChooseLangues" bundle:nil] autorelease];

@@ -38,6 +38,8 @@
 		0FAF4699171452070008C801 /* Screenshot-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF4698171452070008C801 /* Screenshot-7.png */; };
 		0FAF46A8171461CE0008C801 /* bgHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF46A6171461CE0008C801 /* bgHeader.png */; };
 		0FAF46A9171461CE0008C801 /* bgHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF46A7171461CE0008C801 /* bgHeader@2x.png */; };
+		8C6308D1171531850075362F /* Animal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C6308D0171531850075362F /* Animal.plist */; };
+		8CA1F4F517153E39002BF0E9 /* HRFactsCategory_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1F4F417153E39002BF0E9 /* HRFactsCategory_iphone5.xib */; };
 		8CF830581713B51D00741090 /* THLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF830571713B51D00741090 /* THLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8CF8307B1713E03500741090 /* HRmyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8307A1713E03500741090 /* HRmyButton.m */; };
 		8CF830811713EDB300741090 /* HRChooseLangues_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF830801713EDB300741090 /* HRChooseLangues_iphone5.xib */; };
@@ -115,6 +117,8 @@
 		0FAF4698171452070008C801 /* Screenshot-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-7.png"; sourceTree = "<group>"; };
 		0FAF46A6171461CE0008C801 /* bgHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgHeader.png; sourceTree = "<group>"; };
 		0FAF46A7171461CE0008C801 /* bgHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgHeader@2x.png"; sourceTree = "<group>"; };
+		8C6308D0171531850075362F /* Animal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Animal.plist; sourceTree = "<group>"; };
+		8CA1F4F417153E39002BF0E9 /* HRFactsCategory_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRFactsCategory_iphone5.xib; sourceTree = "<group>"; };
 		8CF830561713B51D00741090 /* THLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLabel.h; sourceTree = "<group>"; };
 		8CF830571713B51D00741090 /* THLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLabel.m; sourceTree = "<group>"; };
 		8CF830791713E03500741090 /* HRmyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRmyButton.h; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 				0F0AA7171712ECCC00EA07CD /* main.m */,
 				0F0AA7191712ECCC00EA07CD /* Hooray-Prefix.pch */,
 				0FADEA09171308CD00FB3842 /* Localizable.strings */,
+				8C6308D0171531850075362F /* Animal.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				0FAF4693171451300008C801 /* HRFactsCategory.h */,
 				0FAF4694171451310008C801 /* HRFactsCategory.m */,
 				0FAF4695171451310008C801 /* HRFactsCategory.xib */,
+				8CA1F4F417153E39002BF0E9 /* HRFactsCategory_iphone5.xib */,
 			);
 			path = Viewcontroller;
 			sourceTree = "<group>";
@@ -495,6 +501,8 @@
 				0FAF4699171452070008C801 /* Screenshot-7.png in Resources */,
 				0FAF46A8171461CE0008C801 /* bgHeader.png in Resources */,
 				0FAF46A9171461CE0008C801 /* bgHeader@2x.png in Resources */,
+				8C6308D1171531850075362F /* Animal.plist in Resources */,
+				8CA1F4F517153E39002BF0E9 /* HRFactsCategory_iphone5.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

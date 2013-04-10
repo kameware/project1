@@ -7,16 +7,22 @@
 //
 
 #import "HRFactsCategory.h"
-
+#import "HRAppDelegate.h"
 @interface HRFactsCategory ()
 
 @end
 
 @implementation HRFactsCategory
-
+@synthesize dictAnimals;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if ([[HRAppDelegate shareAppDelegate] isTall]) {
+        self = [super initWithNibName:[nibNameOrNil stringByAppendingString:@"_iphone5"] bundle:nibBundleOrNil];
+    }
+    else{
+        self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    }
+
     if (self) {
         // Custom initialization
     }
@@ -26,7 +32,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cacheDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [cacheDirectory stringByAppendingString:@"/Animal.plist"];
+    //get all animal from plits file
+    dictAnimals=[[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+    NSLog(@"animal:%@",dictAnimals);
+    allKey=[[NSMutableArray alloc] initWithArray:[dictAnimals allKeys]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,29 +59,28 @@
 #pragma table delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 10;
+    return [dictAnimals count];
 }
-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {    
+    return [[dictAnimals objectForKey:[allKey objectAtIndex:section]] count];
+}
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *aView = [[UIView alloc] initWithFrame:CGRectZero];
     aView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bgHeader"]];
     THLabel *labelTitle = [[THLabel alloc] init];
-    labelTitle.text = @" Sport";
-    labelTitle.textAlignment=UITextAlignmentLeft;
-    labelTitle.font = [UIFont boldSystemFontOfSize:22];
+    NSString *headerText=@" ";
+    headerText=[headerText stringByAppendingString:[allKey objectAtIndex:section]];
+    labelTitle.text =headerText ;
+//    labelTitle.textAlignment=UITextAlignmentLeft;
+    labelTitle.font = [UIFont boldSystemFontOfSize:20];
     labelTitle.textColor = [UIColor whiteColor];
     labelTitle.backgroundColor = [UIColor clearColor];
-    [labelTitle setFrame:CGRectMake(10, 0, 298, 30)];
+    [labelTitle setFrame:CGRectMake(3, 0, 298, 30)];
     labelTitle.strokeColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
     labelTitle.strokeSize=2;
     [aView addSubview:labelTitle];
     [labelTitle release];
     return [aView autorelease];
-}
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
@@ -82,7 +93,10 @@
     // Configure the cell...
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] init] autorelease];
-        cell.textLabel.text=@"Dog";
+        //add dot right of animal name
+        NSString *nameAnimal=@"• ";
+        nameAnimal=[nameAnimal stringByAppendingString:[[dictAnimals objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row]];
+        cell.textLabel.text=nameAnimal;
         cell.textLabel.textColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
     }
     return cell;
@@ -98,4 +112,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (IBAction)backPress:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated: YES];
+}
 @end
