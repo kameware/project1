@@ -8,12 +8,13 @@
 
 #import "HRFactsCategory.h"
 #import "HRAppDelegate.h"
+#import "HRFactsDecreptions.h"
 @interface HRFactsCategory ()
 
 @end
 
 @implementation HRFactsCategory
-@synthesize dictAnimals;
+@synthesize listAnimals;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if ([[HRAppDelegate shareAppDelegate] isTall]) {
@@ -36,9 +37,9 @@
     NSString *cacheDirectory = [paths objectAtIndex:0];
     NSString *filePath = [cacheDirectory stringByAppendingString:@"/Animal.plist"];
     //get all animal from plits file
-    dictAnimals=[[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
-    NSLog(@"animal:%@",dictAnimals);
-    allKey=[[NSMutableArray alloc] initWithArray:[dictAnimals allKeys]];
+    listAnimals=[[NSMutableArray alloc] initWithContentsOfFile:filePath];
+    NSLog(@"animal:%@",listAnimals);
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,10 +60,10 @@
 #pragma table delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return [dictAnimals count];
+    return [listAnimals count];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {    
-    return [[dictAnimals objectForKey:[allKey objectAtIndex:section]] count];
+    return [[listAnimals objectForKey:[allKey objectAtIndex:section]] count];
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *aView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -95,7 +96,7 @@
         cell = [[[UITableViewCell alloc] init] autorelease];
         //add dot right of animal name
         NSString *nameAnimal=@"• ";
-        nameAnimal=[nameAnimal stringByAppendingString:[[dictAnimals objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row]];
+        nameAnimal=[nameAnimal stringByAppendingString:[[listAnimals objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row]];
         cell.textLabel.text=nameAnimal;
         cell.textLabel.textColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
     }
@@ -110,6 +111,11 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HRFactsDecreptions *hRFactsDecreptions=[[[HRFactsDecreptions alloc] initWithNibName:@"HRFactsDecreptions" bundle:nil] autorelease];
+    hRFactsDecreptions.theAnimal=[[listAnimals objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    NSLog(@"the animal chose:%@",hRFactsDecreptions.theAnimal);
+    [self.navigationController pushViewController:hRFactsDecreptions animated:YES];
+    
 }
 
 - (IBAction)backPress:(id)sender {

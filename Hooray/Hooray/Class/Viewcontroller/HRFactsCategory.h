@@ -13,6 +13,6 @@
     NSMutableArray *allKey;
 }
 @property (retain, nonatomic) IBOutlet UITableView *tableVIew;
-@property (retain, nonatomic) NSMutableDictionary *dictAnimals;
+@property (retain, nonatomic) NSMutableArray *listAnimals;
 - (IBAction)backPress:(id)sender;
 @end

@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>A</key>
-	<array>
-		<string>Al</string>
-		<string>Ac</string>
-	</array>
-	<key>B</key>
-	<array>
-		<string>Bl</string>
-		<string>Bc</string>
-	</array>
-</dict>
+<array>
+	<string>Alligator</string>
+	<string>Ant</string>
+	<string>Baboon</string>
+	<string>Bat</string>
+	<string>Bear</string>
+	<string>Bee</string>
+	<string>Beetle</string>
+	<string>Bluebird</string>
+	<string>Buffalo</string>
+	<string>Butterfly</string>
+	<string>Camel</string>
+	<string>Canary</string>
+	<string>Cat</string>
+	<string>Cheetah</string>
+</array>
 </plist>
