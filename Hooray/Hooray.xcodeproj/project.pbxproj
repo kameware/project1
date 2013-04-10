@@ -40,6 +40,12 @@
 		0FAF46A9171461CE0008C801 /* bgHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF46A7171461CE0008C801 /* bgHeader@2x.png */; };
 		8C6308D1171531850075362F /* Animal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C6308D0171531850075362F /* Animal.plist */; };
 		8CA1F4F517153E39002BF0E9 /* HRFactsCategory_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1F4F417153E39002BF0E9 /* HRFactsCategory_iphone5.xib */; };
+		8CA1F50A1715744F002BF0E9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1F5031715744F002BF0E9 /* MBProgressHUD.m */; };
+		8CA1F50B1715744F002BF0E9 /* MKStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1F5051715744F002BF0E9 /* MKStoreManager.m */; };
+		8CA1F50C1715744F002BF0E9 /* MKStoreObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1F5071715744F002BF0E9 /* MKStoreObserver.m */; };
+		8CA1F50D1715744F002BF0E9 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1F5091715744F002BF0E9 /* SFHFKeychainUtils.m */; };
+		8CA1F510171576CF002BF0E9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1F50F171576CF002BF0E9 /* Security.framework */; };
+		8CA1F512171576D6002BF0E9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1F511171576D6002BF0E9 /* StoreKit.framework */; };
 		8CF830581713B51D00741090 /* THLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF830571713B51D00741090 /* THLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8CF8307B1713E03500741090 /* HRmyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8307A1713E03500741090 /* HRmyButton.m */; };
 		8CF830811713EDB300741090 /* HRChooseLangues_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF830801713EDB300741090 /* HRChooseLangues_iphone5.xib */; };
@@ -119,6 +125,16 @@
 		0FAF46A7171461CE0008C801 /* bgHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgHeader@2x.png"; sourceTree = "<group>"; };
 		8C6308D0171531850075362F /* Animal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Animal.plist; sourceTree = "<group>"; };
 		8CA1F4F417153E39002BF0E9 /* HRFactsCategory_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRFactsCategory_iphone5.xib; sourceTree = "<group>"; };
+		8CA1F5021715744F002BF0E9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8CA1F5031715744F002BF0E9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		8CA1F5041715744F002BF0E9 /* MKStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStoreManager.h; sourceTree = "<group>"; };
+		8CA1F5051715744F002BF0E9 /* MKStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStoreManager.m; sourceTree = "<group>"; };
+		8CA1F5061715744F002BF0E9 /* MKStoreObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStoreObserver.h; sourceTree = "<group>"; };
+		8CA1F5071715744F002BF0E9 /* MKStoreObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStoreObserver.m; sourceTree = "<group>"; };
+		8CA1F5081715744F002BF0E9 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		8CA1F5091715744F002BF0E9 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		8CA1F50F171576CF002BF0E9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8CA1F511171576D6002BF0E9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8CF830561713B51D00741090 /* THLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLabel.h; sourceTree = "<group>"; };
 		8CF830571713B51D00741090 /* THLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLabel.m; sourceTree = "<group>"; };
 		8CF830791713E03500741090 /* HRmyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRmyButton.h; sourceTree = "<group>"; };
@@ -167,6 +183,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA1F512171576D6002BF0E9 /* StoreKit.framework in Frameworks */,
+				8CA1F510171576CF002BF0E9 /* Security.framework in Frameworks */,
 				8CF830B6171409F300741090 /* MediaPlayer.framework in Frameworks */,
 				0F0AA70C1712ECCB00EA07CD /* UIKit.framework in Frameworks */,
 				0F0AA70E1712ECCC00EA07CD /* Foundation.framework in Frameworks */,
@@ -180,7 +198,6 @@
 		0F0AA6FC1712ECCB00EA07CD = {
 			isa = PBXGroup;
 			children = (
-				8CF830B5171409F200741090 /* MediaPlayer.framework */,
 				0F0AA7111712ECCC00EA07CD /* Hooray */,
 				0F0AA70A1712ECCB00EA07CD /* Frameworks */,
 				0F0AA7081712ECCB00EA07CD /* Products */,
@@ -198,6 +215,9 @@
 		0F0AA70A1712ECCB00EA07CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CA1F511171576D6002BF0E9 /* StoreKit.framework */,
+				8CA1F50F171576CF002BF0E9 /* Security.framework */,
+				8CF830B5171409F200741090 /* MediaPlayer.framework */,
 				0F0AA70B1712ECCB00EA07CD /* UIKit.framework */,
 				0F0AA70D1712ECCB00EA07CD /* Foundation.framework */,
 				0F0AA70F1712ECCC00EA07CD /* CoreGraphics.framework */,
@@ -365,6 +385,14 @@
 		8CF830551713B51700741090 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				8CA1F5021715744F002BF0E9 /* MBProgressHUD.h */,
+				8CA1F5031715744F002BF0E9 /* MBProgressHUD.m */,
+				8CA1F5041715744F002BF0E9 /* MKStoreManager.h */,
+				8CA1F5051715744F002BF0E9 /* MKStoreManager.m */,
+				8CA1F5061715744F002BF0E9 /* MKStoreObserver.h */,
+				8CA1F5071715744F002BF0E9 /* MKStoreObserver.m */,
+				8CA1F5081715744F002BF0E9 /* SFHFKeychainUtils.h */,
+				8CA1F5091715744F002BF0E9 /* SFHFKeychainUtils.m */,
 				8CF830561713B51D00741090 /* THLabel.h */,
 				8CF830571713B51D00741090 /* THLabel.m */,
 			);
@@ -525,6 +553,10 @@
 				8CF830B41714064500741090 /* HRBackgroundVideoView.m in Sources */,
 				8CF830BD1714169D00741090 /* UINavigationController+RotationIn_IOS6.m in Sources */,
 				0FAF4696171451310008C801 /* HRFactsCategory.m in Sources */,
+				8CA1F50A1715744F002BF0E9 /* MBProgressHUD.m in Sources */,
+				8CA1F50B1715744F002BF0E9 /* MKStoreManager.m in Sources */,
+				8CA1F50C1715744F002BF0E9 /* MKStoreObserver.m in Sources */,
+				8CA1F50D1715744F002BF0E9 /* SFHFKeychainUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,11 +637,15 @@
 		0F0AA72C1712ECCC00EA07CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thao Nguyen Minh (CJ2KDSD4NE)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thao Nguyen Minh (CJ2KDSD4NE)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hooray/Hooray-Prefix.pch";
 				INFOPLIST_FILE = "Hooray/Hooray-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9A53BF21-44F5-4585-849E-1CADAFD1C0C7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9A53BF21-44F5-4585-849E-1CADAFD1C0C7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

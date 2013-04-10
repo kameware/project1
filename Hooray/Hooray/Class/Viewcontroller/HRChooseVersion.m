@@ -46,13 +46,11 @@
 //    _freeVerBtn.titleOutlet .font=[UIFont boldSystemFontOfSize:15];
     [_fullVerBtn setTextbutton:NSLocalizedString(@"FULL VERSION", nil)];
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 - (void)dealloc {
     [_nameAppLabel release];
     [_freeVerBtn release];
@@ -74,11 +72,105 @@
 }
 
 - (IBAction)fullVerPress:(id)sender {
-    HRVideoFactsSection *hRVideoFactsSection=[[[HRVideoFactsSection alloc] initWithNibName:@"HRVideoFactsSection" bundle:nil] autorelease];
-    [self.navigationController pushViewController:hRVideoFactsSection animated:YES];
+//    HRVideoFactsSection *hRVideoFactsSection=[[[HRVideoFactsSection alloc] initWithNibName:@"HRVideoFactsSection" bundle:nil] autorelease];
+//    [self.navigationController pushViewController:hRVideoFactsSection animated:YES];
+    if ([self IAPItemPurchased]) {
+        
+    }
+    else
+    {
+        loadingIcon=[[MBProgressHUD alloc] initWithView:self.view];
+        loadingIcon.labelText=@"please wait...";
+        [self.view addSubview:loadingIcon];
+        [loadingIcon show:YES];
+        [self IAPItemPurchase];
+        return;
+    }
 }
 
 - (IBAction)backPress:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+#pragma mark
+#pragma mark check IAPItemPurchased
+-(void)IAPItemPurchase
+{
+    UIAlertView  *askToPurchase = [[UIAlertView alloc]
+                                   initWithTitle:@"Hooray"
+                                   message:@"Do you want to buy full version ?"
+                                   delegate:self
+                                   cancelButtonTitle:nil
+                                   otherButtonTitles:@"Yes", @"No", nil];
+    
+    askToPurchase.delegate = self;
+    askToPurchase.tag=1234;
+    [askToPurchase show];
+    
+    [askToPurchase release];
+}
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    
+    
+    if (alertView.tag==1234) {
+        
+        if (buttonIndex==0) {
+            if ([SKPaymentQueue canMakePayments]) {
+                [[MKStoreManager sharedManager] buyFeature:@"kItemId"];
+                [MKStoreManager setDelegate:self];
+            } else {
+                UIAlertView *tmp = [[UIAlertView alloc]
+                                    initWithTitle:@"Prohibited"
+                                    message:@"Parental Control is enabled, cannot make a purchase!"
+                                    delegate:self
+                                    cancelButtonTitle:nil
+                                    otherButtonTitles:@"Ok", nil];
+                
+                [tmp show];
+                [tmp release];
+                
+            }
+            
+        }
+        
+    }
+    
+    
+    
+}
+-(void)productFetchComplete{
+    NSLog(@"connect succes itune");
+    [loadingIcon hide:YES];
+}
+
+-(void)productPurchased:(NSString *)productId{
+    
+    NSLog(@"succes -> purchase %@",productId);
+    if ([productId isEqualToString:@"kItemId"]) {
+        NSError *error = nil;
+        [SFHFKeychainUtils storeUsername:@"IAPluannguyen" andPassword:@"luanchi" forServiceName:kStoredData updateExisting:YES error:&error];
+        UIAlertView *tmp = [[UIAlertView alloc]
+                            initWithTitle:@"Hooray"
+                            message:@"Great!"
+                            delegate:self
+                            cancelButtonTitle:nil
+                            otherButtonTitles:@"Ok", nil];
+        
+        [tmp show];
+        [tmp release];
+    }
+}
+-(void)transactionCanceled{
+    NSLog(@"transactionCanceled - failed");
+    
+    [loadingIcon hide:YES];
+    //    TAlertView *alert = [[TAlertView alloc]initType1WithTitle:@"" andMessage:@"Purchase failed, please try again later!" andDelegate:nil andOptionTitle:@"OK"];
+    
+}
+-(BOOL)IAPItemPurchased {
+    NSError *error = nil;
+    NSString *password = [SFHFKeychainUtils getPasswordForUsername:@"IAPluannguyen" andServiceName:kStoredData error:&error];
+    if ([password isEqualToString:@"luanchi"]) return YES; else return NO;
+}
+
 @end
