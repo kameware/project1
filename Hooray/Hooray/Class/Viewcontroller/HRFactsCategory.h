@@ -11,6 +11,7 @@
 @interface HRFactsCategory : UIViewController
 {
     NSMutableArray *allKey;
+    NSMutableDictionary *allSection;
 }
 @property (retain, nonatomic) IBOutlet UITableView *tableVIew;
 @property (retain, nonatomic) NSMutableArray *listAnimals;

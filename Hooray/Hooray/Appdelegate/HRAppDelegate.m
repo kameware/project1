@@ -44,7 +44,6 @@
         [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"Animal" ofType:@"plist"] toPath:filePath error:nil];
     }
     [fm release];
-    NSLog(@"animal:%@",[[NSMutableDictionary alloc] initWithContentsOfFile:filePath]);
     [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"en", nil] forKey:@"AppleLanguages"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     self.viewController = [[[HRChooseLangues alloc] initWithNibName:@"HRChooseLangues" bundle:nil] autorelease];

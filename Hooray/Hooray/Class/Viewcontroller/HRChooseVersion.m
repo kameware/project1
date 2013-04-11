@@ -155,7 +155,6 @@
                             delegate:self
                             cancelButtonTitle:nil
                             otherButtonTitles:@"Ok", nil];
-        
         [tmp show];
         [tmp release];
     }

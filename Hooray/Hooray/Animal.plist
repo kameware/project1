@@ -6,6 +6,7 @@
 	<string>Ant</string>
 	<string>Baboon</string>
 	<string>Bat</string>
+	<string>Badger</string>
 	<string>Bear</string>
 	<string>Bee</string>
 	<string>Beetle</string>
@@ -16,5 +17,100 @@
 	<string>Canary</string>
 	<string>Cat</string>
 	<string>Cheetah</string>
+	<string>Chicken</string>
+	<string>Chimpanzee</string>
+	<string>Cobra</string>
+	<string>Cockroah</string>
+	<string>Cod</string>
+	<string>Cougar</string>
+	<string>Cow</string>
+	<string>Coyote</string>
+	<string>Crane</string>
+	<string>Cricket</string>
+	<string>Crocodile</string>
+	<string>Crow</string>
+	<string>Cuckoo</string>
+	<string>Deer</string>
+	<string>Dog</string>
+	<string>Dolphin</string>
+	<string>Donkey</string>
+	<string>Dove</string>
+	<string>Duck</string>
+	<string>Eagle</string>
+	<string>Elephant</string>
+	<string>Elk</string>
+	<string>Ferret</string>
+	<string>Finch</string>
+	<string>Flamingo</string>
+	<string>Fox</string>
+	<string>Frog</string>
+	<string>Giraffe</string>
+	<string>Goat</string>
+	<string>Goldfinch</string>
+	<string>Gorilla</string>
+	<string>Grasshopper</string>
+	<string>Guinea Pig</string>
+	<string>Hamster</string>
+	<string>Hare</string>
+	<string>Hawk</string>
+	<string>Heron</string>
+	<string>Hippotamus</string>
+	<string>Hummingbird</string>
+	<string>Hyena</string>
+	<string>Horse</string>
+	<string>House Fly</string>
+	<string>Kangaroo</string>
+	<string>Kingbird</string>
+	<string>Kiwi</string>
+	<string>Komodo Dragon</string>
+	<string>Lemur</string>
+	<string>Leopard</string>
+	<string>Lion</string>
+	<string>Locust</string>
+	<string>Magpie</string>
+	<string>Meerkat</string>
+	<string>Monkey</string>
+	<string>Moose</string>
+	<string>Mosquito</string>
+	<string>Mouse</string>
+	<string>Nightingale</string>
+	<string>Octopus</string>
+	<string>Oriole</string>
+	<string>Ostrich</string>
+	<string>Owl</string>
+	<string>Panda</string>
+	<string>Parrot</string>
+	<string>Peacock</string>
+	<string>Pelican</string>
+	<string>Penguin</string>
+	<string>Pheasant</string>
+	<string>Pig</string>
+	<string>Pigeon</string>
+	<string>Quail</string>
+	<string>Rabbit</string>
+	<string>Raccoon</string>
+	<string>Rattlesnake</string>
+	<string>Raven</string>
+	<string>Reindeer</string>
+	<string>Rhinoceros</string>
+	<string>Robin</string>
+	<string>Salmon</string>
+	<string>Scorpion</string>
+	<string>Seagull</string>
+	<string>Seal</string>
+	<string>Shark</string>
+	<string>Sheep</string>
+	<string>Snail</string>
+	<string>Sparrow</string>
+	<string>Squid</string>
+	<string>Squirrel</string>
+	<string>Swan</string>
+	<string>Tiger</string>
+	<string>Tortoise</string>
+	<string>Turkey</string>
+	<string>Whale</string>
+	<string>Wolf</string>
+	<string>Woodpecker</string>
+	<string>Zebra</string>
 </array>
 </plist>

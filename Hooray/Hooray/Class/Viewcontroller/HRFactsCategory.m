@@ -38,8 +38,34 @@
     NSString *filePath = [cacheDirectory stringByAppendingString:@"/Animal.plist"];
     //get all animal from plits file
     listAnimals=[[NSMutableArray alloc] initWithContentsOfFile:filePath];
-    NSLog(@"animal:%@",listAnimals);
-
+    allKey=[[NSMutableArray alloc] init];
+    allSection=[[NSMutableDictionary alloc] init];
+    //get index A-Z
+    NSLog(@"current lang:%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"]);
+    BOOL found;
+    for (NSString *theAnimal in listAnimals) {
+        NSString *c = [[theAnimal substringToIndex:1] uppercaseString];
+        found=NO;
+        for (NSString *str in allKey)
+        {
+            if ([str isEqualToString:c])
+            {
+                found=YES;
+            }
+            
+        }
+        
+        if (!found) {
+            [allKey addObject:c];
+        }
+    }
+   //store in section
+    for (NSString * aLetter in allKey) {
+        NSPredicate *filter=[NSPredicate predicateWithFormat:@"SELF BEGINSWITH[c] %@",aLetter];
+        NSSortDescriptor* sortOrder = [NSSortDescriptor sortDescriptorWithKey: @"self" ascending: YES];
+        NSArray *asection=[[listAnimals filteredArrayUsingPredicate:filter] sortedArrayUsingDescriptors:[NSArray arrayWithObject: sortOrder]];;
+        [allSection setObject:asection forKey:aLetter];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,10 +86,10 @@
 #pragma table delegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return [listAnimals count];
+    return [allKey count];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {    
-    return [[listAnimals objectForKey:[allKey objectAtIndex:section]] count];
+    return [[allSection objectForKey:[allKey objectAtIndex:section]] count];
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *aView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -96,7 +122,9 @@
         cell = [[[UITableViewCell alloc] init] autorelease];
         //add dot right of animal name
         NSString *nameAnimal=@"• ";
-        nameAnimal=[nameAnimal stringByAppendingString:[[listAnimals objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row]];
+        nameAnimal=[nameAnimal stringByAppendingString:[[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row]];
+        NSString *animalforLang=NSLocalizedString([[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row],nil);
+        nameAnimal=[nameAnimal stringByAppendingFormat:@"(%@)",animalforLang];
         cell.textLabel.text=nameAnimal;
         cell.textLabel.textColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
     }
@@ -112,7 +140,7 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     HRFactsDecreptions *hRFactsDecreptions=[[[HRFactsDecreptions alloc] initWithNibName:@"HRFactsDecreptions" bundle:nil] autorelease];
-    hRFactsDecreptions.theAnimal=[[listAnimals objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+    hRFactsDecreptions.theAnimal=[[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
     NSLog(@"the animal chose:%@",hRFactsDecreptions.theAnimal);
     [self.navigationController pushViewController:hRFactsDecreptions animated:YES];
     
