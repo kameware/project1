@@ -16,7 +16,7 @@
 
 @implementation HRVideoPlay
 @synthesize moviePlayerController;
-@synthesize PathFile;
+@synthesize videoNumber;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if ([[HRAppDelegate shareAppDelegate] isTall]) {
@@ -90,11 +90,12 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-    NSString *filepath   =   [[NSBundle mainBundle] pathForResource:@"big-buck-bunny-clip" ofType:@"m4v"];
+    NSString *filepath   =   [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"video%d",videoNumber] ofType:@"m4v"];
     NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
     moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
 //    [moviePlayerController.view setFrame:CGRectMake(38, 93, 246.5, 212)];
-    _portraitView.videoNameLabel.text=@"";
+    _portraitView.videoNameLabel.text=[NSString stringWithFormat:@"video%d",videoNumber];
+     _ladscapeView.videoNameLabel.text=[NSString stringWithFormat:@"video%d",videoNumber];
     if (isportraitmode) {
         [self setframeForPortrait];
     }else{

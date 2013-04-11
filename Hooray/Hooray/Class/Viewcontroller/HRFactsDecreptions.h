@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AVFoundation/AVFoundation.h>
 @interface HRFactsDecreptions : UIViewController
 
 @property (retain, nonatomic) IBOutlet UIImageView *imageAnimal;
@@ -16,6 +16,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *nextLabel;
 @property (retain, nonatomic) NSString *theAnimal;
 @property (retain, nonatomic) IBOutlet UILabel *faceNumLabel;
+@property (strong) AVAudioPlayer * AnimalPlayer;
 - (IBAction)prePress:(id)sender;
 - (IBAction)nextPress:(id)sender;
 - (IBAction)backPress:(id)sender;

@@ -73,7 +73,9 @@
 }
 #pragma mark-action
 - (IBAction)videoPress:(id)sender {
+    
     HRVideoPlay *hRVideoPlay=[[[HRVideoPlay alloc] initWithNibName:@"HRVideoPlay" bundle:nil] autorelease];
+    hRVideoPlay.videoNumber=[sender tag];
     [self presentModalViewController:hRVideoPlay animated:YES];
 }
 

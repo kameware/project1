@@ -14,5 +14,5 @@
 - (IBAction)backPress:(id)sender;
 @property (retain, nonatomic) IBOutlet HRViewVideo *portraitView;
 @property (retain, nonatomic) IBOutlet HRViewVideo *ladscapeView;
-@property (retain, nonatomic) NSString *PathFile;
+@property (assign, nonatomic) NSInteger videoNumber;
 @end

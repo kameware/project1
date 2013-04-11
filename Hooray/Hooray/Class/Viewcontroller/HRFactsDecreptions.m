@@ -17,6 +17,19 @@
 
 @implementation HRFactsDecreptions
 @synthesize theAnimal;
+@synthesize AnimalPlayer;
+
+- (AVAudioPlayer *)loadMp3:(NSString *)filename {
+    NSURL * url = [[NSBundle mainBundle] URLForResource:filename withExtension:@"mp3"];
+    NSError * error;
+    AVAudioPlayer * player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    if (!player) {
+        NSLog(@"Error loading %@: %@", url, error.localizedDescription);
+    } else {
+        [player prepareToPlay];
+    }
+    return player;
+}
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if ([[HRAppDelegate shareAppDelegate] isTall]) {
@@ -25,7 +38,7 @@
     else{
         self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     }
-
+    
     if (self) {
         // Custom initialization
     }
@@ -35,6 +48,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //add long press image
+    _imageAnimal.userInteractionEnabled=YES;
+    _imageAnimal.clipsToBounds=YES;
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]
+                                               initWithTarget:self
+                                               action:@selector(handleLongPress:)];
+    longPress.minimumPressDuration = 1.0;
+    [longPress setNumberOfTouchesRequired:1];
+    [_imageAnimal addGestureRecognizer:longPress];
+    [longPress release];
+    //load audio
+    AnimalPlayer =[self loadMp3:theAnimal];
     currentFactNum=0;
     NSLog(@"image name:%@",theAnimal);
     _nextLabel.text=AMLocalizedString(@"Next", nil);
@@ -52,7 +77,9 @@
     
     _faceNumLabel.text=[NSString stringWithFormat:@"%@ %d",AMLocalizedString(@"Fact", nil),currentFactNum+1];
 }
-
+-(void)viewWillDisappear:(BOOL)animated{
+    [AnimalPlayer stop];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -65,6 +92,7 @@
     [_backLabel release];
     [_nextLabel release];
     [_faceNumLabel release];
+    [AnimalPlayer release];AnimalPlayer=nil;
     [super dealloc];
 }
 - (void)viewDidUnload {
@@ -75,6 +103,19 @@
     [self setFaceNumLabel:nil];
     [super viewDidUnload];
 }
+-  (void)handleLongPress:(UILongPressGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"UIGestureRecognizerStateEnded");
+        
+        //Do Whatever You want on End of Gesture
+    }
+    else if (sender.state == UIGestureRecognizerStateBegan){
+        NSLog(@"UIGestureRecognizerStateBegan.");
+        [AnimalPlayer play];
+        //Do Whatever You want on Began of Gesture
+    }
+}
+#pragma mark-action
 - (IBAction)prePress:(id)sender {
     if (currentFactNum==0) {
         return;
