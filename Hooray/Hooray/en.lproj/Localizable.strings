@@ -68,7 +68,7 @@
 "Hare"="Hare";
 "Hawk"="Hawk";
 "Heron"="Heron";
-"Hippotamus"="Hippotamus";
+"Hippopotamus"="Hippopotamus";
 "Hummingbird"="Hummingbird";
 "Hyena"="Hyena";
 "Horse"="Horse";
@@ -126,3 +126,18 @@
 "Wolf"="Wolf";
 "Woodpecker"="Woodpecker";
 "Zebra"="Zebra";
+//screen 8
+"Next"="Next";
+"Back"="Back";
+"Fact"="Fact";
+"Alligator_fact"="Alligators are reptiles and are cold-blooded.\
+There are two different species of alligator, the American and the Chinese.\
+Alligator eggs become female in cooler temperatures and male in warmer temperatures.\
+Alligator tongues cannot move so they swallow by raising their head.\
+The name Alligator comes from the Spanish for lizard – “el lagarto”.\
+Alligators lay eggs to bring out their young.\
+Alligators have 75 teeth.\
+Alligators breathe easily under water because of the nostrils at the end of their snouts.\
+Alligator front legs each have 5 toes, and the two back legs each have four webbed toes.\
+Alligators can typically live between 35 and 50 years.";
+

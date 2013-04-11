@@ -123,8 +123,10 @@
         //add dot right of animal name
         NSString *nameAnimal=@"• ";
         nameAnimal=[nameAnimal stringByAppendingString:[[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row]];
-        NSString *animalforLang=NSLocalizedString([[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row],nil);
-        nameAnimal=[nameAnimal stringByAppendingFormat:@"(%@)",animalforLang];
+        if (![[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0] isEqualToString:@"en"]) {
+            NSString *animalforLang=NSLocalizedString([[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row],nil);
+            nameAnimal=[nameAnimal stringByAppendingFormat:@"(%@)",animalforLang];
+        }
         cell.textLabel.text=nameAnimal;
         cell.textLabel.textColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
     }

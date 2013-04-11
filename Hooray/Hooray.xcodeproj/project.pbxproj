@@ -66,7 +66,7 @@
 		0F9285DB1715A16500BA4399 /* Goat.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F92856F1715A16500BA4399 /* Goat.png */; };
 		0F9285DC1715A16500BA4399 /* Goldfinch.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285701715A16500BA4399 /* Goldfinch.png */; };
 		0F9285DD1715A16500BA4399 /* Gorilla.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285711715A16500BA4399 /* Gorilla.png */; };
-		0F9285DE1715A16500BA4399 /* Guineapig.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285721715A16500BA4399 /* Guineapig.png */; };
+		0F9285DE1715A16500BA4399 /* Guinea pig.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285721715A16500BA4399 /* Guinea pig.png */; };
 		0F9285DF1715A16500BA4399 /* Hamster.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285731715A16500BA4399 /* Hamster.png */; };
 		0F9285E01715A16500BA4399 /* Hare.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285741715A16500BA4399 /* Hare.png */; };
 		0F9285E11715A16500BA4399 /* Hawk.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285751715A16500BA4399 /* Hawk.png */; };
@@ -74,7 +74,7 @@
 		0F9285E31715A16500BA4399 /* Hippopotamus.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285771715A16500BA4399 /* Hippopotamus.png */; };
 		0F9285E41715A16500BA4399 /* Horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285781715A16500BA4399 /* Horse.png */; };
 		0F9285E51715A16500BA4399 /* Hummingbird.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285791715A16500BA4399 /* Hummingbird.png */; };
-		0F9285E61715A16500BA4399 /* Huosefly.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F92857A1715A16500BA4399 /* Huosefly.png */; };
+		0F9285E61715A16500BA4399 /* House fly.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F92857A1715A16500BA4399 /* House fly.png */; };
 		0F9285E71715A16500BA4399 /* Hyena.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F92857B1715A16500BA4399 /* Hyena.png */; };
 		0F9285E81715A16500BA4399 /* Kangaroo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F92857C1715A16500BA4399 /* Kangaroo.png */; };
 		0F9285E91715A16500BA4399 /* kingbird.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F92857D1715A16500BA4399 /* kingbird.png */; };
@@ -105,7 +105,7 @@
 		0F9286021715A16500BA4399 /* Pigeon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285961715A16500BA4399 /* Pigeon.png */; };
 		0F9286031715A16500BA4399 /* Polarbear.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285971715A16500BA4399 /* Polarbear.png */; };
 		0F9286041715A16500BA4399 /* Rabbit.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285981715A16500BA4399 /* Rabbit.png */; };
-		0F9286051715A16500BA4399 /* Racoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285991715A16500BA4399 /* Racoon.png */; };
+		0F9286051715A16500BA4399 /* Raccoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F9285991715A16500BA4399 /* Raccoon.png */; };
 		0F9286061715A16500BA4399 /* Rattle Snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F92859A1715A16500BA4399 /* Rattle Snake.png */; };
 		0F9286071715A16500BA4399 /* Raven.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F92859B1715A16500BA4399 /* Raven.png */; };
 		0F9286081715A16500BA4399 /* Reindeer.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F92859C1715A16500BA4399 /* Reindeer.png */; };
@@ -265,7 +265,7 @@
 		0F92856F1715A16500BA4399 /* Goat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Goat.png; sourceTree = "<group>"; };
 		0F9285701715A16500BA4399 /* Goldfinch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Goldfinch.png; sourceTree = "<group>"; };
 		0F9285711715A16500BA4399 /* Gorilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gorilla.png; sourceTree = "<group>"; };
-		0F9285721715A16500BA4399 /* Guineapig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Guineapig.png; sourceTree = "<group>"; };
+		0F9285721715A16500BA4399 /* Guinea pig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Guinea pig.png"; sourceTree = "<group>"; };
 		0F9285731715A16500BA4399 /* Hamster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hamster.png; sourceTree = "<group>"; };
 		0F9285741715A16500BA4399 /* Hare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hare.png; sourceTree = "<group>"; };
 		0F9285751715A16500BA4399 /* Hawk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hawk.png; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 		0F9285771715A16500BA4399 /* Hippopotamus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hippopotamus.png; sourceTree = "<group>"; };
 		0F9285781715A16500BA4399 /* Horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Horse.png; sourceTree = "<group>"; };
 		0F9285791715A16500BA4399 /* Hummingbird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hummingbird.png; sourceTree = "<group>"; };
-		0F92857A1715A16500BA4399 /* Huosefly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huosefly.png; sourceTree = "<group>"; };
+		0F92857A1715A16500BA4399 /* House fly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "House fly.png"; sourceTree = "<group>"; };
 		0F92857B1715A16500BA4399 /* Hyena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hyena.png; sourceTree = "<group>"; };
 		0F92857C1715A16500BA4399 /* Kangaroo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kangaroo.png; sourceTree = "<group>"; };
 		0F92857D1715A16500BA4399 /* kingbird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kingbird.png; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 		0F9285961715A16500BA4399 /* Pigeon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pigeon.png; sourceTree = "<group>"; };
 		0F9285971715A16500BA4399 /* Polarbear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Polarbear.png; sourceTree = "<group>"; };
 		0F9285981715A16500BA4399 /* Rabbit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rabbit.png; sourceTree = "<group>"; };
-		0F9285991715A16500BA4399 /* Racoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Racoon.png; sourceTree = "<group>"; };
+		0F9285991715A16500BA4399 /* Raccoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Raccoon.png; sourceTree = "<group>"; };
 		0F92859A1715A16500BA4399 /* Rattle Snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rattle Snake.png"; sourceTree = "<group>"; };
 		0F92859B1715A16500BA4399 /* Raven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Raven.png; sourceTree = "<group>"; };
 		0F92859C1715A16500BA4399 /* Reindeer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reindeer.png; sourceTree = "<group>"; };
@@ -539,7 +539,7 @@
 				0F92856F1715A16500BA4399 /* Goat.png */,
 				0F9285701715A16500BA4399 /* Goldfinch.png */,
 				0F9285711715A16500BA4399 /* Gorilla.png */,
-				0F9285721715A16500BA4399 /* Guineapig.png */,
+				0F9285721715A16500BA4399 /* Guinea pig.png */,
 				0F9285731715A16500BA4399 /* Hamster.png */,
 				0F9285741715A16500BA4399 /* Hare.png */,
 				0F9285751715A16500BA4399 /* Hawk.png */,
@@ -547,7 +547,7 @@
 				0F9285771715A16500BA4399 /* Hippopotamus.png */,
 				0F9285781715A16500BA4399 /* Horse.png */,
 				0F9285791715A16500BA4399 /* Hummingbird.png */,
-				0F92857A1715A16500BA4399 /* Huosefly.png */,
+				0F92857A1715A16500BA4399 /* House fly.png */,
 				0F92857B1715A16500BA4399 /* Hyena.png */,
 				0F92857C1715A16500BA4399 /* Kangaroo.png */,
 				0F92857D1715A16500BA4399 /* kingbird.png */,
@@ -578,7 +578,7 @@
 				0F9285961715A16500BA4399 /* Pigeon.png */,
 				0F9285971715A16500BA4399 /* Polarbear.png */,
 				0F9285981715A16500BA4399 /* Rabbit.png */,
-				0F9285991715A16500BA4399 /* Racoon.png */,
+				0F9285991715A16500BA4399 /* Raccoon.png */,
 				0F92859A1715A16500BA4399 /* Rattle Snake.png */,
 				0F92859B1715A16500BA4399 /* Raven.png */,
 				0F92859C1715A16500BA4399 /* Reindeer.png */,
@@ -957,7 +957,7 @@
 				0F9285DB1715A16500BA4399 /* Goat.png in Resources */,
 				0F9285DC1715A16500BA4399 /* Goldfinch.png in Resources */,
 				0F9285DD1715A16500BA4399 /* Gorilla.png in Resources */,
-				0F9285DE1715A16500BA4399 /* Guineapig.png in Resources */,
+				0F9285DE1715A16500BA4399 /* Guinea pig.png in Resources */,
 				0F9285DF1715A16500BA4399 /* Hamster.png in Resources */,
 				0F9285E01715A16500BA4399 /* Hare.png in Resources */,
 				0F9285E11715A16500BA4399 /* Hawk.png in Resources */,
@@ -965,7 +965,7 @@
 				0F9285E31715A16500BA4399 /* Hippopotamus.png in Resources */,
 				0F9285E41715A16500BA4399 /* Horse.png in Resources */,
 				0F9285E51715A16500BA4399 /* Hummingbird.png in Resources */,
-				0F9285E61715A16500BA4399 /* Huosefly.png in Resources */,
+				0F9285E61715A16500BA4399 /* House fly.png in Resources */,
 				0F9285E71715A16500BA4399 /* Hyena.png in Resources */,
 				0F9285E81715A16500BA4399 /* Kangaroo.png in Resources */,
 				0F9285E91715A16500BA4399 /* kingbird.png in Resources */,
@@ -996,7 +996,7 @@
 				0F9286021715A16500BA4399 /* Pigeon.png in Resources */,
 				0F9286031715A16500BA4399 /* Polarbear.png in Resources */,
 				0F9286041715A16500BA4399 /* Rabbit.png in Resources */,
-				0F9286051715A16500BA4399 /* Racoon.png in Resources */,
+				0F9286051715A16500BA4399 /* Raccoon.png in Resources */,
 				0F9286061715A16500BA4399 /* Rattle Snake.png in Resources */,
 				0F9286071715A16500BA4399 /* Raven.png in Resources */,
 				0F9286081715A16500BA4399 /* Reindeer.png in Resources */,

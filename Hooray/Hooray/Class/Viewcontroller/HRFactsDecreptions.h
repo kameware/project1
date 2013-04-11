@@ -15,6 +15,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *backLabel;
 @property (retain, nonatomic) IBOutlet UILabel *nextLabel;
 @property (retain, nonatomic) NSString *theAnimal;
+@property (retain, nonatomic) IBOutlet UILabel *faceNumLabel;
 - (IBAction)prePress:(id)sender;
 - (IBAction)nextPress:(id)sender;
 - (IBAction)backPress:(id)sender;
