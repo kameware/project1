@@ -9,6 +9,7 @@
 #import "HRFactsCategory.h"
 #import "HRAppDelegate.h"
 #import "HRFactsDecreptions.h"
+#import "LocalizationSystem.h"
 @interface HRFactsCategory ()
 
 @end
@@ -124,7 +125,7 @@
         NSString *nameAnimal=@"• ";
         nameAnimal=[nameAnimal stringByAppendingString:[[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row]];
         if (![[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0] isEqualToString:@"en"]) {
-            NSString *animalforLang=NSLocalizedString([[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row],nil);
+            NSString *animalforLang=AMLocalizedString([[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row],nil);
             nameAnimal=[nameAnimal stringByAppendingFormat:@"(%@)",animalforLang];
         }
         cell.textLabel.text=nameAnimal;

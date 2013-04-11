@@ -159,6 +159,10 @@
 		0FAF46A8171461CE0008C801 /* bgHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF46A6171461CE0008C801 /* bgHeader.png */; };
 		0FAF46A9171461CE0008C801 /* bgHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAF46A7171461CE0008C801 /* bgHeader@2x.png */; };
 		8C6308D1171531850075362F /* Animal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C6308D0171531850075362F /* Animal.plist */; };
+		8C6F58851716CC0E002CA39F /* UIAlertView+error.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F58841716CC0E002CA39F /* UIAlertView+error.m */; };
+		8C6F58881716CCF6002CA39F /* HRChooseLangues_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6F58871716CCF5002CA39F /* HRChooseLangues_iphone5.xib */; };
+		8C6F588A1716CDE5002CA39F /* HRFactsDecreptions_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6F58891716CDE4002CA39F /* HRFactsDecreptions_iphone5.xib */; };
+		8C6F588D1716CF79002CA39F /* HRViewVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F588C1716CF79002CA39F /* HRViewVideo.m */; };
 		8CA1F4F517153E39002BF0E9 /* HRFactsCategory_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1F4F417153E39002BF0E9 /* HRFactsCategory_iphone5.xib */; };
 		8CA1F50A1715744F002BF0E9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1F5031715744F002BF0E9 /* MBProgressHUD.m */; };
 		8CA1F50B1715744F002BF0E9 /* MKStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1F5051715744F002BF0E9 /* MKStoreManager.m */; };
@@ -166,9 +170,9 @@
 		8CA1F50D1715744F002BF0E9 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1F5091715744F002BF0E9 /* SFHFKeychainUtils.m */; };
 		8CA1F510171576CF002BF0E9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1F50F171576CF002BF0E9 /* Security.framework */; };
 		8CA1F512171576D6002BF0E9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1F511171576D6002BF0E9 /* StoreKit.framework */; };
+		8CF7468D1716BEE900F430FD /* LocalizationSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF7468C1716BEE900F430FD /* LocalizationSystem.m */; };
 		8CF830581713B51D00741090 /* THLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF830571713B51D00741090 /* THLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8CF8307B1713E03500741090 /* HRmyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8307A1713E03500741090 /* HRmyButton.m */; };
-		8CF830811713EDB300741090 /* HRChooseLangues_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF830801713EDB300741090 /* HRChooseLangues_iphone5.xib */; };
 		8CF830851713EEC500741090 /* HRChooseVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF830831713EEC400741090 /* HRChooseVersion.m */; };
 		8CF830861713EEC500741090 /* HRChooseVersion.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF830841713EEC500741090 /* HRChooseVersion.xib */; };
 		8CF8308B1713EFC400741090 /* btn_app.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF830871713EFC400741090 /* btn_app.png */; };
@@ -191,7 +195,6 @@
 		8CF830AD171404F000741090 /* HRVideoPlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CF830AB171404EF00741090 /* HRVideoPlay.xib */; };
 		8CF830B01714054800741090 /* Screenshot-6a.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF830AE1714054700741090 /* Screenshot-6a.png */; };
 		8CF830B11714054800741090 /* Screenshot-6b.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF830AF1714054700741090 /* Screenshot-6b.png */; };
-		8CF830B41714064500741090 /* HRBackgroundVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF830B31714064500741090 /* HRBackgroundVideoView.m */; };
 		8CF830B6171409F300741090 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CF830B5171409F200741090 /* MediaPlayer.framework */; };
 		8CF830B917140FEC00741090 /* big-buck-bunny-clip.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 8CF830B817140FEC00741090 /* big-buck-bunny-clip.m4v */; };
 		8CF830BD1714169D00741090 /* UINavigationController+RotationIn_IOS6.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF830BC1714169D00741090 /* UINavigationController+RotationIn_IOS6.m */; };
@@ -367,6 +370,12 @@
 		8C1121C117166D3F0091E2DE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8C1121C217166D400091E2DE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8C6308D0171531850075362F /* Animal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Animal.plist; sourceTree = "<group>"; };
+		8C6F58831716CC0E002CA39F /* UIAlertView+error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+error.h"; sourceTree = "<group>"; };
+		8C6F58841716CC0E002CA39F /* UIAlertView+error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+error.m"; sourceTree = "<group>"; };
+		8C6F58871716CCF5002CA39F /* HRChooseLangues_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRChooseLangues_iphone5.xib; sourceTree = "<group>"; };
+		8C6F58891716CDE4002CA39F /* HRFactsDecreptions_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRFactsDecreptions_iphone5.xib; sourceTree = "<group>"; };
+		8C6F588B1716CF79002CA39F /* HRViewVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRViewVideo.h; sourceTree = "<group>"; };
+		8C6F588C1716CF79002CA39F /* HRViewVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRViewVideo.m; sourceTree = "<group>"; };
 		8CA1F4F417153E39002BF0E9 /* HRFactsCategory_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRFactsCategory_iphone5.xib; sourceTree = "<group>"; };
 		8CA1F5021715744F002BF0E9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		8CA1F5031715744F002BF0E9 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -378,11 +387,12 @@
 		8CA1F5091715744F002BF0E9 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
 		8CA1F50F171576CF002BF0E9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8CA1F511171576D6002BF0E9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8CF7468B1716BEE900F430FD /* LocalizationSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizationSystem.h; sourceTree = "<group>"; };
+		8CF7468C1716BEE900F430FD /* LocalizationSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizationSystem.m; sourceTree = "<group>"; };
 		8CF830561713B51D00741090 /* THLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLabel.h; sourceTree = "<group>"; };
 		8CF830571713B51D00741090 /* THLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLabel.m; sourceTree = "<group>"; };
 		8CF830791713E03500741090 /* HRmyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRmyButton.h; sourceTree = "<group>"; };
 		8CF8307A1713E03500741090 /* HRmyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRmyButton.m; sourceTree = "<group>"; };
-		8CF830801713EDB300741090 /* HRChooseLangues_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRChooseLangues_iphone5.xib; sourceTree = "<group>"; };
 		8CF830821713EEC400741090 /* HRChooseVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRChooseVersion.h; sourceTree = "<group>"; };
 		8CF830831713EEC400741090 /* HRChooseVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRChooseVersion.m; sourceTree = "<group>"; };
 		8CF830841713EEC500741090 /* HRChooseVersion.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRChooseVersion.xib; sourceTree = "<group>"; };
@@ -409,8 +419,6 @@
 		8CF830AB171404EF00741090 /* HRVideoPlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRVideoPlay.xib; sourceTree = "<group>"; };
 		8CF830AE1714054700741090 /* Screenshot-6a.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-6a.png"; sourceTree = "<group>"; };
 		8CF830AF1714054700741090 /* Screenshot-6b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot-6b.png"; sourceTree = "<group>"; };
-		8CF830B21714064500741090 /* HRBackgroundVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRBackgroundVideoView.h; sourceTree = "<group>"; };
-		8CF830B31714064500741090 /* HRBackgroundVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRBackgroundVideoView.m; sourceTree = "<group>"; };
 		8CF830B5171409F200741090 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8CF830B817140FEC00741090 /* big-buck-bunny-clip.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "big-buck-bunny-clip.m4v"; sourceTree = "<group>"; };
 		8CF830BB1714169D00741090 /* UINavigationController+RotationIn_IOS6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+RotationIn_IOS6.h"; sourceTree = "<group>"; };
@@ -638,10 +646,10 @@
 		0FADE9CC1712FC2D00FB3842 /* Viewcontroller */ = {
 			isa = PBXGroup;
 			children = (
-				8CF830801713EDB300741090 /* HRChooseLangues_iphone5.xib */,
 				0FADE9E31712FCA700FB3842 /* HRChooseLangues.h */,
 				0FADE9E41712FCA700FB3842 /* HRChooseLangues.m */,
 				0FADE9E51712FCA700FB3842 /* HRChooseLangues.xib */,
+				8C6F58871716CCF5002CA39F /* HRChooseLangues_iphone5.xib */,
 				8CF830821713EEC400741090 /* HRChooseVersion.h */,
 				8CF830831713EEC400741090 /* HRChooseVersion.m */,
 				8CF830841713EEC500741090 /* HRChooseVersion.xib */,
@@ -665,6 +673,7 @@
 				0F9285371715999900BA4399 /* HRFactsDecreptions.h */,
 				0F9285381715999900BA4399 /* HRFactsDecreptions.m */,
 				0F9285391715999900BA4399 /* HRFactsDecreptions.xib */,
+				8C6F58891716CDE4002CA39F /* HRFactsDecreptions_iphone5.xib */,
 			);
 			path = Viewcontroller;
 			sourceTree = "<group>";
@@ -774,10 +783,12 @@
 		8CF830781713E01500741090 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				8CF7468B1716BEE900F430FD /* LocalizationSystem.h */,
+				8CF7468C1716BEE900F430FD /* LocalizationSystem.m */,
 				8CF830791713E03500741090 /* HRmyButton.h */,
 				8CF8307A1713E03500741090 /* HRmyButton.m */,
-				8CF830B21714064500741090 /* HRBackgroundVideoView.h */,
-				8CF830B31714064500741090 /* HRBackgroundVideoView.m */,
+				8C6F588B1716CF79002CA39F /* HRViewVideo.h */,
+				8C6F588C1716CF79002CA39F /* HRViewVideo.m */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -793,6 +804,8 @@
 		8CF830BA1714168F00741090 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				8C6F58831716CC0E002CA39F /* UIAlertView+error.h */,
+				8C6F58841716CC0E002CA39F /* UIAlertView+error.m */,
 				8CF830BB1714169D00741090 /* UINavigationController+RotationIn_IOS6.h */,
 				8CF830BC1714169D00741090 /* UINavigationController+RotationIn_IOS6.m */,
 			);
@@ -871,7 +884,6 @@
 				0FADE9F71712FFA200FB3842 /* Screenshot-1.png in Resources */,
 				0FADE9F91712FFAD00FB3842 /* Screenshot-2.png in Resources */,
 				0FADEA07171308CD00FB3842 /* Localizable.strings in Resources */,
-				8CF830811713EDB300741090 /* HRChooseLangues_iphone5.xib in Resources */,
 				8CF830861713EEC500741090 /* HRChooseVersion.xib in Resources */,
 				8CF8308B1713EFC400741090 /* btn_app.png in Resources */,
 				8CF8308C1713EFC400741090 /* btn_back.png in Resources */,
@@ -1023,6 +1035,8 @@
 				0F92861D1715A16500BA4399 /* Woodpecker.png in Resources */,
 				0F92861E1715A16500BA4399 /* Zebra.png in Resources */,
 				0F9286201715A97300BA4399 /* Animal.txt in Resources */,
+				8C6F58881716CCF6002CA39F /* HRChooseLangues_iphone5.xib in Resources */,
+				8C6F588A1716CDE5002CA39F /* HRFactsDecreptions_iphone5.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,7 +1056,6 @@
 				8CF830961713F64800741090 /* HRVideoFactsSection.m in Sources */,
 				8CF8309F1713FBF000741090 /* HRvideoCategory.m in Sources */,
 				8CF830AC171404F000741090 /* HRVideoPlay.m in Sources */,
-				8CF830B41714064500741090 /* HRBackgroundVideoView.m in Sources */,
 				8CF830BD1714169D00741090 /* UINavigationController+RotationIn_IOS6.m in Sources */,
 				0FAF4696171451310008C801 /* HRFactsCategory.m in Sources */,
 				8CA1F50A1715744F002BF0E9 /* MBProgressHUD.m in Sources */,
@@ -1050,6 +1063,9 @@
 				8CA1F50C1715744F002BF0E9 /* MKStoreObserver.m in Sources */,
 				8CA1F50D1715744F002BF0E9 /* SFHFKeychainUtils.m in Sources */,
 				0F92853A1715999900BA4399 /* HRFactsDecreptions.m in Sources */,
+				8CF7468D1716BEE900F430FD /* LocalizationSystem.m in Sources */,
+				8C6F58851716CC0E002CA39F /* UIAlertView+error.m in Sources */,
+				8C6F588D1716CF79002CA39F /* HRViewVideo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

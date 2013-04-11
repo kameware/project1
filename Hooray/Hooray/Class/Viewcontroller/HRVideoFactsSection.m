@@ -34,8 +34,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [_videoBtn setTextbutton:NSLocalizedString(@"VIDEO SECTION", nil)];
-    [_factsBtn setTextbutton:NSLocalizedString(@"FACTS SECTION", nil)];
+    [_videoBtn setTextbutton:AMLocalizedString(@"VIDEO SECTION", nil)];
+    [_factsBtn setTextbutton:AMLocalizedString(@"FACTS SECTION", nil)];
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,14 +1,14 @@
 //
-//  HRBackgroundVideoView.m
+//  HRViewVideo.m
 //  Hooray
 //
-//  Created by cncsoft on 4/9/13.
+//  Created by cncsoft on 4/11/13.
 //  Copyright (c) 2013 Luan. All rights reserved.
 //
 
-#import "HRBackgroundVideoView.h"
+#import "HRViewVideo.h"
 
-@implementation HRBackgroundVideoView
+@implementation HRViewVideo
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -28,4 +28,8 @@
 }
 */
 
+- (void)dealloc {
+    [_videoNameLabel release];
+    [super dealloc];
+}
 @end

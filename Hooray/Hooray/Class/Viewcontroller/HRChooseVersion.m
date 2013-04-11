@@ -34,7 +34,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    _nameAppLabel.text=NSLocalizedString(@"ANIMALHOORAY", nil);
+    _nameAppLabel.text=AMLocalizedString(@"ANIMALHOORAY", nil);
     _nameAppLabel.font=[UIFont fontWithName:@"junegull" size:28];
     _nameAppLabel.strokeColor=[UIColor whiteColor];
     _nameAppLabel.strokeSize=2;
@@ -42,9 +42,12 @@
 	[_nameAppLabel setShadowOffset:CGSizeMake(0.0f, 0.0)];
 	[_nameAppLabel setShadowBlur:15];
     
-    [_freeVerBtn setTextbutton:NSLocalizedString(@"FREE VERSION", nil)];
-//    _freeVerBtn.titleOutlet .font=[UIFont boldSystemFontOfSize:15];
-    [_fullVerBtn setTextbutton:NSLocalizedString(@"FULL VERSION", nil)];
+    [_freeVerBtn setTextbutton:AMLocalizedString(@"FREE VERSION", nil)];
+    [_fullVerBtn setTextbutton:AMLocalizedString(@"FULL VERSION", nil)];
+    // if langguage is selected -> hidden back button
+    if ( [[[NSUserDefaults standardUserDefaults] objectForKey:@"chooseLanguage"] isEqualToString:@"YES"]) {
+        _backBtn.hidden=YES;
+    }
 }
 - (void)didReceiveMemoryWarning
 {
@@ -56,6 +59,7 @@
     [_freeVerBtn release];
     [_fullVerBtn release];
     [_aboutAppTextView release];
+    [_backBtn release];
     [super dealloc];
 }
 - (void)viewDidUnload {
@@ -63,6 +67,7 @@
     [self setFreeVerBtn:nil];
     [self setFullVerBtn:nil];
     [self setAboutAppTextView:nil];
+    [self setBackBtn:nil];
     [super viewDidUnload];
 }
 #pragma mark-action

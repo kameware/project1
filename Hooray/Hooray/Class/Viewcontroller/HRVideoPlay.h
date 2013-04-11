@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h> 
+#import "HRViewVideo.h"
 @interface HRVideoPlay : UIViewController
 @property(nonatomic,retain) MPMoviePlayerController *moviePlayerController;
 - (IBAction)backPress:(id)sender;
-@property (retain, nonatomic) IBOutlet UIView *portraitView;
-@property (retain, nonatomic) IBOutlet UIView *ladscapeView;
+@property (retain, nonatomic) IBOutlet HRViewVideo *portraitView;
+@property (retain, nonatomic) IBOutlet HRViewVideo *ladscapeView;
+@property (retain, nonatomic) NSString *PathFile;
 @end

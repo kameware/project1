@@ -16,6 +16,7 @@
 
 @implementation HRVideoPlay
 @synthesize moviePlayerController;
+@synthesize PathFile;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     if ([[HRAppDelegate shareAppDelegate] isTall]) {
@@ -93,6 +94,7 @@
     NSURL    *fileURL    =   [NSURL fileURLWithPath:filepath];
     moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:fileURL];
 //    [moviePlayerController.view setFrame:CGRectMake(38, 93, 246.5, 212)];
+    _portraitView.videoNameLabel.text=@"";
     if (isportraitmode) {
         [self setframeForPortrait];
     }else{

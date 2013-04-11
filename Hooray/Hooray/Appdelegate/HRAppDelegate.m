@@ -34,6 +34,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+//        [self setLanguage:@"ar"];
     [application setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     // Override point for customization after application launch.
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
@@ -44,8 +45,6 @@
         [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"Animal" ofType:@"plist"] toPath:filePath error:nil];
     }
     [fm release];
-    [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"en", nil] forKey:@"AppleLanguages"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     self.viewController = [[[HRChooseLangues alloc] initWithNibName:@"HRChooseLangues" bundle:nil] autorelease];
     ncviewController=[[UINavigationController alloc] initWithRootViewController:self.viewController];
     ncviewController.navigationBarHidden=YES;

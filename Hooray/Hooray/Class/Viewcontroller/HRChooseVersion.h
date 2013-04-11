@@ -21,6 +21,7 @@
 @property (retain, nonatomic) IBOutlet THLabel *nameAppLabel;
 @property (retain, nonatomic) IBOutlet HRmyButton *freeVerBtn;
 @property (retain, nonatomic) IBOutlet HRmyButton *fullVerBtn;
+@property (retain, nonatomic) IBOutlet UIButton *backBtn;
 @property (retain, nonatomic) IBOutlet UITextView *aboutAppTextView;
 - (IBAction)freeVerPress:(id)sender;
 - (IBAction)fullVerPress:(id)sender;
