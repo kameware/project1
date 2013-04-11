@@ -44,10 +44,12 @@
     
     [_freeVerBtn setTextbutton:AMLocalizedString(@"FREE VERSION", nil)];
     [_fullVerBtn setTextbutton:AMLocalizedString(@"FULL VERSION", nil)];
+    _aboutAppTextView.text=AMLocalizedString(@"ABOUT", nil);
     // if langguage is selected -> hidden back button
     if ( [[[NSUserDefaults standardUserDefaults] objectForKey:@"chooseLanguage"] isEqualToString:@"YES"]) {
         _backBtn.hidden=YES;
     }
+    
 }
 - (void)didReceiveMemoryWarning
 {
