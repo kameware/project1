@@ -273,6 +273,11 @@
 		8CA1F50D1715744F002BF0E9 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1F5091715744F002BF0E9 /* SFHFKeychainUtils.m */; };
 		8CA1F510171576CF002BF0E9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1F50F171576CF002BF0E9 /* Security.framework */; };
 		8CA1F512171576D6002BF0E9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA1F511171576D6002BF0E9 /* StoreKit.framework */; };
+		8CEB97C5171820BD00BA1617 /* video2.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 8CEB97C0171820BD00BA1617 /* video2.m4v */; };
+		8CEB97C6171820BD00BA1617 /* video3.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 8CEB97C1171820BD00BA1617 /* video3.m4v */; };
+		8CEB97C7171820BD00BA1617 /* video4.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 8CEB97C2171820BD00BA1617 /* video4.m4v */; };
+		8CEB97C8171820BD00BA1617 /* video5.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 8CEB97C3171820BD00BA1617 /* video5.m4v */; };
+		8CEB97C9171820BD00BA1617 /* video6.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 8CEB97C4171820BD00BA1617 /* video6.m4v */; };
 		8CF7468D1716BEE900F430FD /* LocalizationSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF7468C1716BEE900F430FD /* LocalizationSystem.m */; };
 		8CF830581713B51D00741090 /* THLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF830571713B51D00741090 /* THLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8CF8307B1713E03500741090 /* HRmyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF8307A1713E03500741090 /* HRmyButton.m */; };
@@ -593,6 +598,11 @@
 		8CA1F5091715744F002BF0E9 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
 		8CA1F50F171576CF002BF0E9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8CA1F511171576D6002BF0E9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8CEB97C0171820BD00BA1617 /* video2.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.m4v; sourceTree = "<group>"; };
+		8CEB97C1171820BD00BA1617 /* video3.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = video3.m4v; sourceTree = "<group>"; };
+		8CEB97C2171820BD00BA1617 /* video4.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = video4.m4v; sourceTree = "<group>"; };
+		8CEB97C3171820BD00BA1617 /* video5.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = video5.m4v; sourceTree = "<group>"; };
+		8CEB97C4171820BD00BA1617 /* video6.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = video6.m4v; sourceTree = "<group>"; };
 		8CF7468B1716BEE900F430FD /* LocalizationSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizationSystem.h; sourceTree = "<group>"; };
 		8CF7468C1716BEE900F430FD /* LocalizationSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizationSystem.m; sourceTree = "<group>"; };
 		8CF830561713B51D00741090 /* THLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLabel.h; sourceTree = "<group>"; };
@@ -1106,6 +1116,11 @@
 		8CF830B717140FDF00741090 /* video */ = {
 			isa = PBXGroup;
 			children = (
+				8CEB97C0171820BD00BA1617 /* video2.m4v */,
+				8CEB97C1171820BD00BA1617 /* video3.m4v */,
+				8CEB97C2171820BD00BA1617 /* video4.m4v */,
+				8CEB97C3171820BD00BA1617 /* video5.m4v */,
+				8CEB97C4171820BD00BA1617 /* video6.m4v */,
 				8CF830B817140FEC00741090 /* video1.m4v */,
 			);
 			path = video;
@@ -1449,6 +1464,11 @@
 				0F111F1C1716F29E00D2B572 /* Wolf.mp3 in Resources */,
 				0F111F1D1716F29E00D2B572 /* Woodpecker.mp3 in Resources */,
 				0F111F1E1716F29E00D2B572 /* Zebra.mp3 in Resources */,
+				8CEB97C5171820BD00BA1617 /* video2.m4v in Resources */,
+				8CEB97C6171820BD00BA1617 /* video3.m4v in Resources */,
+				8CEB97C7171820BD00BA1617 /* video4.m4v in Resources */,
+				8CEB97C8171820BD00BA1617 /* video5.m4v in Resources */,
+				8CEB97C9171820BD00BA1617 /* video6.m4v in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

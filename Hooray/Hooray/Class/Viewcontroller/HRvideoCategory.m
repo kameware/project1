@@ -38,6 +38,21 @@
     [_videoBtn3 setTextbutton:AMLocalizedString(@"VIDEO 3", nil)];
     [_videoBtn4 setTextbutton:AMLocalizedString(@"VIDEO 4", nil)];
     [_videoBtn5 setTextbutton:AMLocalizedString(@"VIDEO 5", nil)];
+    
+    if ([[HRAppDelegate shareAppDelegate] IAPItemPurchased]) {
+        _videoBtn1.enabled=YES;
+        _videoBtn2.enabled=YES;
+        _videoBtn3.enabled=YES;
+        _videoBtn4.enabled=YES;
+        _videoBtn5.enabled=YES;
+        
+    }else{
+        _videoBtn1.enabled=YES;
+        _videoBtn2.enabled=NO;
+        _videoBtn3.enabled=NO;
+        _videoBtn4.enabled=NO;
+        _videoBtn5.enabled=NO;
+    }
 }
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	return NO;

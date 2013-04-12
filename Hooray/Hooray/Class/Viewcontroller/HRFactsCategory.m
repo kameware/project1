@@ -11,7 +11,8 @@
 #import "HRFactsDecreptions.h"
 #import "LocalizationSystem.h"
 @interface HRFactsCategory ()
-
+{
+}
 @end
 
 @implementation HRFactsCategory
@@ -37,6 +38,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cacheDirectory = [paths objectAtIndex:0];
     NSString *filePath = [cacheDirectory stringByAppendingString:@"/Animal.plist"];
+
     //get all animal from plits file
     listAnimals=[[NSMutableArray alloc] initWithContentsOfFile:filePath];
     allKey=[[NSMutableArray alloc] init];
@@ -130,7 +132,16 @@
         }
         cell.textLabel.text=nameAnimal;
         cell.textLabel.textColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
+        int sum=0;
+        for (int i=0; i<=indexPath.section; i++) {
+            sum+=[_tableVIew numberOfRowsInSection:i];
+        }
+        if (![[HRAppDelegate shareAppDelegate] IAPItemPurchased]&&(sum>10)) {
+            cell.userInteractionEnabled=NO;
+            cell.textLabel.textColor=[UIColor grayColor];
+        }
     }
+
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

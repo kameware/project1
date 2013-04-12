@@ -9,6 +9,7 @@
 #import "HRChooseVersion.h"
 #import "HRAppDelegate.h"
 #import "HRVideoFactsSection.h"
+#import "UIAlertView+error.h"
 @interface HRChooseVersion ()
 
 @end
@@ -31,9 +32,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
+    [super viewDidLoad]; 
     _nameAppLabel.text=AMLocalizedString(@"ANIMALHOORAY", nil);
     _nameAppLabel.font=[UIFont fontWithName:@"junegull" size:28];
     _nameAppLabel.strokeColor=[UIColor whiteColor];
@@ -42,12 +41,19 @@
 	[_nameAppLabel setShadowOffset:CGSizeMake(0.0f, 0.0)];
 	[_nameAppLabel setShadowBlur:15];
     
-    [_freeVerBtn setTextbutton:AMLocalizedString(@"FREE VERSION", nil)];
-    [_fullVerBtn setTextbutton:AMLocalizedString(@"FULL VERSION", nil)];
+   
     _aboutAppTextView.text=AMLocalizedString(@"ABOUT", nil);
     // if langguage is selected -> hidden back button
     if ( [[[NSUserDefaults standardUserDefaults] objectForKey:@"chooseLanguage"] isEqualToString:@"YES"]) {
         _backBtn.hidden=YES;
+    }
+    //if is full version we only show fix button
+    if ([[HRAppDelegate shareAppDelegate] IAPItemPurchased]) {
+        [_freeVerBtn setTextbutton:AMLocalizedString(@"PLAY", nil)];
+        _fullVerBtn.hidden=YES;
+    }else{
+        [_freeVerBtn setTextbutton:AMLocalizedString(@"FREE VERSION", nil)];
+        [_fullVerBtn setTextbutton:AMLocalizedString(@"FULL VERSION", nil)];
     }
     
 }
@@ -79,14 +85,11 @@
 }
 
 - (IBAction)fullVerPress:(id)sender {
-//    HRVideoFactsSection *hRVideoFactsSection=[[[HRVideoFactsSection alloc] initWithNibName:@"HRVideoFactsSection" bundle:nil] autorelease];
-//    [self.navigationController pushViewController:hRVideoFactsSection animated:YES];
-    if ([self IAPItemPurchased]) {
+    if ([[HRAppDelegate shareAppDelegate] IAPItemPurchased]) {
         
     }
     else
     {
-
         [self IAPItemPurchase];
         return;
     }
@@ -148,15 +151,19 @@
 }
 -(void)productFetchComplete{
     NSLog(@"connect succes itune");
-    [loadingIcon hide:YES];
+
 }
 
 -(void)productPurchased:(NSString *)productId{
-    
+     [loadingIcon hide:YES];   
     NSLog(@"succes -> purchase %@",productId);
     if ([productId isEqualToString:kItemId]) {
-        NSError *error = nil;
-        [SFHFKeychainUtils storeUsername:@"IAPluannguyen" andPassword:@"luanchi" forServiceName:kStoredData updateExisting:YES error:&error];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"purchased"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+       //show fix button
+        _freeVerBtn.titleOutlet.text=AMLocalizedString(@"PLAY", nil);
+        _fullVerBtn.hidden=YES;
         UIAlertView *tmp = [[UIAlertView alloc]
                             initWithTitle:@"Hooray"
                             message:@"Great!"
@@ -169,15 +176,10 @@
 }
 -(void)transactionCanceled{
     NSLog(@"transactionCanceled - failed");
-    
     [loadingIcon hide:YES];
-    //    TAlertView *alert = [[TAlertView alloc]initType1WithTitle:@"" andMessage:@"Purchase failed, please try again later!" andDelegate:nil andOptionTitle:@"OK"];
+    [UIAlertView error:AMLocalizedString(@"Purchase failed", nil)];
     
 }
--(BOOL)IAPItemPurchased {
-    NSError *error = nil;
-    NSString *password = [SFHFKeychainUtils getPasswordForUsername:@"IAPluannguyen" andServiceName:kStoredData error:&error];
-    if ([password isEqualToString:@"luanchi"]) return YES; else return NO;
-}
+
 
 @end

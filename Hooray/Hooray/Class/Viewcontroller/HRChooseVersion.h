@@ -12,7 +12,6 @@
 #import "MKStoreManager.h"
 #import "SFHFKeychainUtils.h"
 #import "MBProgressHUD.h"
-#define kStoredData @"com.cncmobilegroup.AppForTestIAP" //replace your bundle id
 #define kItemId @"Item_1" //replace your in-app purchase id
 @interface HRChooseVersion : UIViewController
 {

@@ -18,4 +18,5 @@
 @property (strong, nonatomic) UINavigationController *ncviewController;
 + (HRAppDelegate *)shareAppDelegate;
 - (BOOL)isTall;
+-(BOOL)IAPItemPurchased;
 @end
