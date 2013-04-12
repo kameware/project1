@@ -34,12 +34,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Hooray/Class/Viewcontroller/HRChooseVersion.m"
-         timestampString = "387370090.278334"
+         timestampString = "387425677.406235"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "147"
-         endingLineNumber = "147"
-         landmarkName = "-productFetchComplete"
+         startingLineNumber = "172"
+         endingLineNumber = "172"
+         landmarkName = "-transactionCanceled"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

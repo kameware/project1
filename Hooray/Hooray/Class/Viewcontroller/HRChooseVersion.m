@@ -86,10 +86,7 @@
     }
     else
     {
-        loadingIcon=[[MBProgressHUD alloc] initWithView:self.view];
-        loadingIcon.labelText=@"please wait...";
-        [self.view addSubview:loadingIcon];
-        [loadingIcon show:YES];
+
         [self IAPItemPurchase];
         return;
     }
@@ -123,7 +120,11 @@
         
         if (buttonIndex==0) {
             if ([SKPaymentQueue canMakePayments]) {
-                [[MKStoreManager sharedManager] buyFeature:@"kItemId"];
+                loadingIcon=[[MBProgressHUD alloc] initWithView:self.view];
+                loadingIcon.labelText=@"please wait...";
+                [self.view addSubview:loadingIcon];
+                [loadingIcon show:YES];
+                [[MKStoreManager sharedManager] buyFeature:kItemId];
                 [MKStoreManager setDelegate:self];
             } else {
                 UIAlertView *tmp = [[UIAlertView alloc]
@@ -153,7 +154,7 @@
 -(void)productPurchased:(NSString *)productId{
     
     NSLog(@"succes -> purchase %@",productId);
-    if ([productId isEqualToString:@"kItemId"]) {
+    if ([productId isEqualToString:kItemId]) {
         NSError *error = nil;
         [SFHFKeychainUtils storeUsername:@"IAPluannguyen" andPassword:@"luanchi" forServiceName:kStoredData updateExisting:YES error:&error];
         UIAlertView *tmp = [[UIAlertView alloc]
