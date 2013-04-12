@@ -11,10 +11,10 @@
 @implementation UIAlertView(error)
 +(void)error:(NSString*)msg
 {
-   UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"Hooray"
+    UIAlertView *alert=[[UIAlertView alloc] initWithTitle:AMLocalizedString(@"Hooray", nil)
                                 message:msg 
                                delegate:nil 
-                      cancelButtonTitle:@"OK" 
+                      cancelButtonTitle:AMLocalizedString(@"OK", nil)
                       otherButtonTitles: nil];
     [alert show];
     [alert release];

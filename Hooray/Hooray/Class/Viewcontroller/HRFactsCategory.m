@@ -132,16 +132,19 @@
         }
         cell.textLabel.text=nameAnimal;
         cell.textLabel.textColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
+        
+        //check if free version we only 10 animal click.
         int sum=0;
-        for (int i=0; i<=indexPath.section; i++) {
+        for (int i=0; i<indexPath.section; i++) {
             sum+=[_tableVIew numberOfRowsInSection:i];
+            
         }
-        if (![[HRAppDelegate shareAppDelegate] IAPItemPurchased]&&(sum>10)) {
+        sum+=indexPath.row;
+        if (![[HRAppDelegate shareAppDelegate] IAPItemPurchased]&&(sum>=10)) {
             cell.userInteractionEnabled=NO;
             cell.textLabel.textColor=[UIColor grayColor];
         }
     }
-
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

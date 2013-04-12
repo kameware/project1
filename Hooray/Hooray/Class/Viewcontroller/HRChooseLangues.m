@@ -40,6 +40,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self setUptext];
+}
+-(void)setUptext{
     _langugueLabel.font=[UIFont fontWithName:@"junegull" size:18];
     _langugueLabel.text = AMLocalizedString(@"LANGUAGE", nil);
     
@@ -64,6 +67,7 @@
         [btn setTextbutton:AMLocalizedString(titleButton, nil)];
         btn.titleOutlet.font=[UIFont boldSystemFontOfSize:14];
     }
+
 }
 -(void)viewWillAppear:(BOOL)animated{
     // check if we are selected language go to screen 3
@@ -124,6 +128,8 @@
    // set standardUserDefaults to mark selected language
     [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"chooseLanguage"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+    //reload text for language
+    [self setUptext];
 }
 #pragma mark-popup
 -(void)showpopup{

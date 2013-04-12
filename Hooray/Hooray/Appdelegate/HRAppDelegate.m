@@ -9,7 +9,7 @@
 #import "HRAppDelegate.h"
 
 #import "HRChooseLangues.h"
-
+#import "HRSplashView.h"
 @implementation HRAppDelegate
 @synthesize ncviewController;
 - (void)dealloc
@@ -45,10 +45,15 @@
         [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"Animal" ofType:@"plist"] toPath:filePath error:nil];
     }
     [fm release];
+    //test purchased
+    [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"purchased"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     self.viewController = [[[HRChooseLangues alloc] initWithNibName:@"HRChooseLangues" bundle:nil] autorelease];
     ncviewController=[[UINavigationController alloc] initWithRootViewController:self.viewController];
     ncviewController.navigationBarHidden=YES;
     self.window.rootViewController = self.ncviewController;
+//    HRSplashView *hRSplashView=[[[HRSplashView alloc] initWithNibName:@"HRSplashView" bundle:nil] autorelease];
+//    [self.viewController.view addSubview:hRSplashView.view];
     [self.window makeKeyAndVisible];
     [self setAnimationSplash];
     return YES;
