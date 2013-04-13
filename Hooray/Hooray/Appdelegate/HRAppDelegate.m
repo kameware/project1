@@ -46,8 +46,8 @@
     }
     [fm release];
     //test purchased
-    [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"purchased"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+//    [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"purchased"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
     self.viewController = [[[HRChooseLangues alloc] initWithNibName:@"HRChooseLangues" bundle:nil] autorelease];
     ncviewController=[[UINavigationController alloc] initWithRootViewController:self.viewController];
     ncviewController.navigationBarHidden=YES;

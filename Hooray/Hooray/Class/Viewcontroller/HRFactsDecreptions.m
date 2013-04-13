@@ -70,11 +70,14 @@
     
     NSString *factOfAnimal=AMLocalizedString(tempStr, nil);
     listfacts=[[NSMutableArray alloc] initWithArray:[factOfAnimal componentsSeparatedByString:@"\n"]];
-    NSLog(@"num fact:%d",[listfacts count]);
     
     _factsTextField.text=[listfacts objectAtIndex:currentFactNum];
     _factsTextField.font=[UIFont fontWithName:@"junegull" size:25];
     
+    
+}
+-(void)viewDidAppear:(BOOL)animated{
+    //load fact
     _faceNumLabel.text=[NSString stringWithFormat:@"%@ %d",AMLocalizedString(@"Fact", nil),currentFactNum+1];
 }
 -(void)viewWillDisappear:(BOOL)animated{
