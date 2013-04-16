@@ -34,7 +34,7 @@
 {
     [super viewDidLoad]; 
     _nameAppLabel.text=AMLocalizedString(@"ANIMALHOORAY", nil);
-    _nameAppLabel.font=[UIFont fontWithName:@"junegull" size:28];
+    _nameAppLabel.font=[UIFont fontWithName:@"junegull" size:35];
     _nameAppLabel.strokeColor=[UIColor whiteColor];
     _nameAppLabel.strokeSize=2;
     [_nameAppLabel setShadowColor:[UIColor colorWithWhite:0.0f alpha:0.3f]];
@@ -43,10 +43,6 @@
     
    
     _aboutAppTextView.text=AMLocalizedString(@"ABOUT", nil);
-    // if langguage is selected -> hidden back button
-    if ( [[[NSUserDefaults standardUserDefaults] objectForKey:@"chooseLanguage"] isEqualToString:@"YES"]) {
-        _backBtn.hidden=YES;
-    }
     //if is full version we only show fix button
     if ([[HRAppDelegate shareAppDelegate] IAPItemPurchased]) {
         [_freeVerBtn setTextbutton:AMLocalizedString(@"PLAY", nil)];

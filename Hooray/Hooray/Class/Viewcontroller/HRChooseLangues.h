@@ -19,8 +19,5 @@
 @property (retain, nonatomic) IBOutlet UIView *popupView;
 @property (retain, nonatomic) IBOutlet UILabel *selectLanguageLabel;
 @property (retain, nonatomic) IBOutletCollection(HRmyButton) NSArray *btnLang;
-- (IBAction)goPress:(id)sender;
-- (IBAction)selectLangPress:(id)sender;
-
 - (IBAction)chooseAlangPress:(id)sender;
 @end

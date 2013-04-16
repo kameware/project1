@@ -33,11 +33,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [_videoBtn1 setTextbutton:AMLocalizedString(@"VIDEO 1", nil)];
-    [_videoBtn2 setTextbutton:AMLocalizedString(@"VIDEO 2", nil)];
-    [_videoBtn3 setTextbutton:AMLocalizedString(@"VIDEO 3", nil)];
-    [_videoBtn4 setTextbutton:AMLocalizedString(@"VIDEO 4", nil)];
-    [_videoBtn5 setTextbutton:AMLocalizedString(@"VIDEO 5", nil)];
+//    [_videoBtn1 setTextbutton:AMLocalizedString(@"VIDEO 1", nil)];
+//    [_videoBtn2 setTextbutton:AMLocalizedString(@"VIDEO 2", nil)];
+//    [_videoBtn3 setTextbutton:AMLocalizedString(@"VIDEO 3", nil)];
+//    [_videoBtn4 setTextbutton:AMLocalizedString(@"VIDEO 4", nil)];
+//    [_videoBtn5 setTextbutton:AMLocalizedString(@"VIDEO 5", nil)];
     
     if ([[HRAppDelegate shareAppDelegate] IAPItemPurchased]) {
         _videoBtn1.enabled=YES;
