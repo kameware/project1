@@ -10,6 +10,7 @@
 #import "HRAppDelegate.h"
 #import "HRFactsDecreptions.h"
 #import "LocalizationSystem.h"
+#import <QuartzCore/QuartzCore.h>
 @interface HRFactsCategory ()
 {
 }
@@ -35,12 +36,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _tableVIew.layer.cornerRadius=4;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cacheDirectory = [paths objectAtIndex:0];
     NSString *filePath = [cacheDirectory stringByAppendingString:@"/Animal.plist"];
 
     //get all animal from plits file
-    listAnimals=[[NSMutableArray alloc] initWithContentsOfFile:filePath];
+    NSSortDescriptor* sortOrder1 = [NSSortDescriptor sortDescriptorWithKey: @"self" ascending: YES];
+   NSArray *templistAnimals=[[NSArray alloc] initWithContentsOfFile:filePath];
+    listAnimals=[[NSMutableArray alloc] initWithArray:[templistAnimals sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortOrder1]]];
+    [templistAnimals release];
     allKey=[[NSMutableArray alloc] init];
     allSection=[[NSMutableDictionary alloc] init];
     //get index A-Z
@@ -66,7 +71,7 @@
     for (NSString * aLetter in allKey) {
         NSPredicate *filter=[NSPredicate predicateWithFormat:@"SELF BEGINSWITH[c] %@",aLetter];
         NSSortDescriptor* sortOrder = [NSSortDescriptor sortDescriptorWithKey: @"self" ascending: YES];
-        NSArray *asection=[[listAnimals filteredArrayUsingPredicate:filter] sortedArrayUsingDescriptors:[NSArray arrayWithObject: sortOrder]];;
+        NSArray *asection=[[listAnimals filteredArrayUsingPredicate:filter] sortedArrayUsingDescriptors:[NSArray arrayWithObject: sortOrder]];
         [allSection setObject:asection forKey:aLetter];
     }
 }
@@ -102,11 +107,12 @@
     headerText=[headerText stringByAppendingString:[allKey objectAtIndex:section]];
     labelTitle.text =headerText ;
 //    labelTitle.textAlignment=UITextAlignmentLeft;
-    labelTitle.font = [UIFont boldSystemFontOfSize:20];
+    labelTitle.font = [UIFont boldSystemFontOfSize:27];
     labelTitle.textColor = [UIColor whiteColor];
     labelTitle.backgroundColor = [UIColor clearColor];
     [labelTitle setFrame:CGRectMake(3, 0, 298, 30)];
-    labelTitle.strokeColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
+//    labelTitle.strokeColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
+    labelTitle.strokeColor=[UIColor colorWithRed:250.0 green:0 blue:0 alpha:1];
     labelTitle.strokeSize=2;
     [aView addSubview:labelTitle];
     [labelTitle release];
@@ -131,8 +137,8 @@
             nameAnimal=[nameAnimal stringByAppendingFormat:@"(%@)",animalforLang];
         }
         cell.textLabel.text=nameAnimal;
-        cell.textLabel.textColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
-        cell.textLabel.font=[UIFont fontWithName:@"junegull" size:20];
+        cell.textLabel.textColor=[UIColor colorWithRed:70.0 green:0 blue:0 alpha:1];
+        cell.textLabel.font=[UIFont fontWithName:@"junegull" size:25];
         //check if free version we only 10 animal click.
         int sum=0;
         for (int i=0; i<indexPath.section; i++) {
@@ -158,9 +164,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     HRFactsDecreptions *hRFactsDecreptions=[[[HRFactsDecreptions alloc] initWithNibName:@"HRFactsDecreptions" bundle:nil] autorelease];
     hRFactsDecreptions.theAnimal=[[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
-    NSLog(@"the animal chose:%@",hRFactsDecreptions.theAnimal);
+    hRFactsDecreptions.listAnimal=[NSMutableArray arrayWithArray:listAnimals];
     [self.navigationController pushViewController:hRFactsDecreptions animated:YES];
-    
 }
 
 - (IBAction)backPress:(id)sender {

@@ -18,7 +18,7 @@
 @implementation HRFactsDecreptions
 @synthesize theAnimal;
 @synthesize AnimalPlayer;
-
+@synthesize listAnimal;
 - (AVAudioPlayer *)loadMp3:(NSString *)filename {
     NSURL * url = [[NSBundle mainBundle] URLForResource:filename withExtension:@"mp3"];
     NSError * error;
@@ -51,37 +51,24 @@
     //add long press image
     _imageAnimal.userInteractionEnabled=YES;
     _imageAnimal.clipsToBounds=YES;
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]
+    UITapGestureRecognizer *longPress = [[UITapGestureRecognizer alloc]
                                                initWithTarget:self
                                                action:@selector(handleLongPress:)];
-    longPress.minimumPressDuration = 1.0;
+//    longPress.minimumPressDuration = 1.0;
     [longPress setNumberOfTouchesRequired:1];
     [_imageAnimal addGestureRecognizer:longPress];
     [longPress release];
-    //load audio
-    AnimalPlayer =[self loadMp3:theAnimal];
-    currentFactNum=0;
-    NSLog(@"image name:%@",theAnimal);
-    _nextLabel.text=AMLocalizedString(@"Next", nil);
-    _backLabel.text=AMLocalizedString(@"Back", nil);
-    _imageAnimal.image=[UIImage imageNamed:theAnimal];
-    
-    NSString *tempStr=[NSString stringWithFormat:@"%@_fact",theAnimal];
-    
-    NSString *factOfAnimal=AMLocalizedString(tempStr, nil);
-    listfacts=[[NSMutableArray alloc] initWithArray:[factOfAnimal componentsSeparatedByString:@"\n"]];
-    
-    _factsTextField.text=[listfacts objectAtIndex:currentFactNum];
-    _factsTextField.font=[UIFont fontWithName:@"junegull" size:25];
-    
-    
+    [self initWithAnimal:theAnimal];
+    _factsTextField.font=[UIFont fontWithName:@"junegull" size:20];
 }
--(void)viewDidAppear:(BOOL)animated{
+-(void)viewWillAppear:(BOOL)animated{
     //load fact
+       [_factsTextField addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew) context:NULL];
     _faceNumLabel.text=[NSString stringWithFormat:@"%@ %d",AMLocalizedString(@"Fact", nil),currentFactNum+1];
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [AnimalPlayer stop];
+[_factsTextField removeObserver:self forKeyPath:@"contentSize"];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -91,11 +78,12 @@
 
 - (void)dealloc {
     [_imageAnimal release];
-    [_factsTextField release];
+    [_factsTextField release];_factsTextField=nil;
     [_backLabel release];
     [_nextLabel release];
     [_faceNumLabel release];
     [AnimalPlayer release];AnimalPlayer=nil;
+
     [super dealloc];
 }
 - (void)viewDidUnload {
@@ -106,15 +94,40 @@
     [self setFaceNumLabel:nil];
     [super viewDidUnload];
 }
+#pragma mark- init animal
+-(void)initWithAnimal:(NSString*)aAnimal{
+    //load audio
+    AnimalPlayer =[self loadMp3:aAnimal];
+    currentFactNum=0;
+    NSLog(@"image name:%@",aAnimal);
+    NSString *tempStr=[NSString stringWithFormat:@"%@_fact",aAnimal];
+    NSString *factOfAnimal=AMLocalizedString(tempStr, nil);
+    listfacts=[[NSMutableArray alloc] initWithArray:[factOfAnimal componentsSeparatedByString:@"\n"]];
+    [UIView transitionWithView: self.imageAnimal
+                      duration: 0.35f
+                       options: UIViewAnimationOptionTransitionCrossDissolve
+                    animations: ^(void)
+     {
+         _imageAnimal.image=[UIImage imageNamed:aAnimal];
+         _factsTextField.text=[listfacts objectAtIndex:currentFactNum];
+         _faceNumLabel.text=[NSString stringWithFormat:@"%@ %d",AMLocalizedString(@"Fact", nil),currentFactNum+1];
+     }
+                    completion: ^(BOOL isFinished)
+     {
+         /* TODO: Whatever you want here */
+         
+     }];
+}
+#pragma mark- GestureRecognizer delegate
 -  (void)handleLongPress:(UILongPressGestureRecognizer*)sender {
     if (sender.state == UIGestureRecognizerStateEnded) {
         NSLog(@"UIGestureRecognizerStateEnded");
-        
+         [AnimalPlayer play];
         //Do Whatever You want on End of Gesture
     }
     else if (sender.state == UIGestureRecognizerStateBegan){
         NSLog(@"UIGestureRecognizerStateBegan.");
-        [AnimalPlayer play];
+       
         //Do Whatever You want on Began of Gesture
     }
 }
@@ -140,5 +153,23 @@
 
 - (IBAction)backPress:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)nextAnimalPress:(id)sender {
+    [AnimalPlayer stop];
+    int i=[listAnimal indexOfObject:theAnimal];
+    i++;
+    if (i==[listAnimal count]) {
+        return;
+    }
+    theAnimal=[listAnimal objectAtIndex:i];
+    [self initWithAnimal:theAnimal];
+}
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+        // This message is for me, do whatever I want with it.
+        UITextView *tv = object;
+        CGFloat topCorrect = ([tv bounds].size.height - [tv contentSize].height * [tv zoomScale])/2.0;
+        topCorrect = ( topCorrect < 0.0 ? 0.0 : topCorrect );
+        tv.contentOffset = (CGPoint){.x = 0, .y = -topCorrect};
 }
 @end
