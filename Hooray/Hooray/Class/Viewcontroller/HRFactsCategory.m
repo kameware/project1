@@ -132,7 +132,7 @@
         }
         cell.textLabel.text=nameAnimal;
         cell.textLabel.textColor=[UIColor colorWithRed:10/255.0 green:111/255.0 blue:55/255.0 alpha:1];
-        
+        cell.textLabel.font=[UIFont fontWithName:@"junegull" size:20];
         //check if free version we only 10 animal click.
         int sum=0;
         for (int i=0; i<indexPath.section; i++) {

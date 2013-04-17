@@ -131,17 +131,17 @@
 -(void)setframeForPortrait
 {
     if ([[HRAppDelegate shareAppDelegate] isTall]) {
-       [moviePlayerController.view setFrame:CGRectMake(38, 93, 246.5, 212)];         
+       [moviePlayerController.view setFrame:CGRectMake(27, 163, 265.5, 212)];
     }else{
-       [moviePlayerController.view setFrame:CGRectMake(38, 93, 246.5, 212)]; 
+       [moviePlayerController.view setFrame:CGRectMake(28, 119, 262.5, 212)];
     }
 }
 -(void)setframeForLadscape
 {
     if (![[HRAppDelegate shareAppDelegate] isTall]) {
-     [moviePlayerController.view setFrame:CGRectMake(74.5, 64, 335, 209)];        
+     [moviePlayerController.view setFrame:CGRectMake(68, 64, 334, 209)];
     }else{
-     [moviePlayerController.view setFrame:CGRectMake(118.5, 64, 335, 209)];
+     [moviePlayerController.view setFrame:CGRectMake(103, 64, 367, 209)];
     }
 }
 @end
