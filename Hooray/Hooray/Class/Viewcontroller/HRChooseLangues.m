@@ -46,7 +46,7 @@
         [self setUptext];
 }
 -(void)setUptext{
-    _langugueLabel.font=[UIFont fontWithName:@"junegull" size:20];
+    _langugueLabel.font=[UIFont fontWithName:@"junegull" size:25];
     _langugueLabel.text = AMLocalizedString(@"LANGUAGE", nil);
     
     _nameAppLabel.text=AMLocalizedString(@"ANIMALHOORAY", nil);
@@ -63,6 +63,8 @@
         NSString *titleButton=[NSString stringWithFormat:@"LANG_%d",btn.tag];
         [btn setTextbutton:AMLocalizedString(titleButton, nil)];
         btn.titleOutlet.font=[UIFont boldSystemFontOfSize:14];
+        btn.titleOutlet.alpha=0.8;
+        btn.titleOutlet.strokeColor=[UIColor clearColor];
     }
 
 }

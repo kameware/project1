@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Hooray/Class/Viewcontroller/HRFactsDecreptions.m"
-         timestampString = "387914585.589313"
+         timestampString = "387992493.508453"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "87"
-         endingLineNumber = "87"
+         startingLineNumber = "93"
+         endingLineNumber = "93"
          landmarkName = "-dealloc"
          landmarkType = "5">
       </FileBreakpoint>

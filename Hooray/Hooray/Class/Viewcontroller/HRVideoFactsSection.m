@@ -36,8 +36,8 @@
     // Do any additional setup after loading the view from its nib.
 //    [_videoBtn setTextbutton:AMLocalizedString(@"VIDEO SECTION", nil)];
 //    [_factsBtn setTextbutton:AMLocalizedString(@"FACTS SECTION", nil)];
-    [_videoBtn setTitle:AMLocalizedString(@"Video", nil) forState:UIControlStateNormal];
-    [_factsBtn setTitle:AMLocalizedString(@"Fact", nil) forState:UIControlStateNormal];
+    [_videoBtn setTitle:AMLocalizedString(@"VIDEOS", nil) forState:UIControlStateNormal];
+    [_factsBtn setTitle:AMLocalizedString(@"FACTS", nil) forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning

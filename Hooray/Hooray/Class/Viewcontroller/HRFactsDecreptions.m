@@ -58,13 +58,19 @@
     [longPress setNumberOfTouchesRequired:1];
     [_imageAnimal addGestureRecognizer:longPress];
     [longPress release];
-    [self initWithAnimal:theAnimal];
+
     _factsTextField.font=[UIFont fontWithName:@"junegull" size:20];
 }
 -(void)viewWillAppear:(BOOL)animated{
     //load fact
        [_factsTextField addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew) context:NULL];
     _faceNumLabel.text=[NSString stringWithFormat:@"%@ %d",AMLocalizedString(@"Fact", nil),currentFactNum+1];
+    _faceNumLabel.strokeColor=[UIColor whiteColor];
+    _faceNumLabel.strokeSize=1;
+    [_faceNumLabel setShadowColor:[UIColor colorWithWhite:0.0f alpha:0.3f]];
+	[_faceNumLabel setShadowOffset:CGSizeMake(0.0f, 0.0)];
+	[_faceNumLabel setShadowBlur:15];
+    [self initWithAnimal:theAnimal];
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [AnimalPlayer stop];

@@ -272,8 +272,6 @@
 		0FADE9F31712FE5100FB3842 /* btn_go.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FADE9EF1712FE5100FB3842 /* btn_go.png */; };
 		0FADE9F41712FE5100FB3842 /* btn_go@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FADE9F01712FE5100FB3842 /* btn_go@2x.png */; };
 		0FADEA07171308CD00FB3842 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0FADEA09171308CD00FB3842 /* Localizable.strings */; };
-		0FAEF675171D85DA001FA042 /* HRChooseLangues_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAEF674171D85DA001FA042 /* HRChooseLangues_iphone5.xib */; };
-		0FAEF677171D88AD001FA042 /* HRChooseVersion_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FAEF676171D88AD001FA042 /* HRChooseVersion_iphone5.xib */; };
 		0FAEF680171D8EBC001FA042 /* btn_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAEF678171D8EBC001FA042 /* btn_red.png */; };
 		0FAEF681171D8EBC001FA042 /* iconAudio.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAEF679171D8EBC001FA042 /* iconAudio.png */; };
 		0FAEF682171D8EBC001FA042 /* iconVideo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FAEF67A171D8EBC001FA042 /* iconVideo.png */; };
@@ -315,9 +313,17 @@
 		0FB99952171DAA8600AAD14B /* playvideoBgHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB9994E171DAA8600AAD14B /* playvideoBgHeader@2x.png */; };
 		0FB99955171DADAF00AAD14B /* playvideoLadscapeBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB99953171DADAF00AAD14B /* playvideoLadscapeBg.png */; };
 		0FB99956171DADAF00AAD14B /* playvideoLadscapeBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FB99954171DADAF00AAD14B /* playvideoLadscapeBg@2x.png */; };
+		0FE7330C17202C130064191C /* HRFactsDecreptions_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7330B17202C130064191C /* HRFactsDecreptions_iphone5.xib */; };
+		0FE7330F17202E510064191C /* btnRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7330D17202E510064191C /* btnRed.png */; };
+		0FE7331017202E510064191C /* btnRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7330E17202E510064191C /* btnRed@2x.png */; };
+		0FE733131720355D0064191C /* bgGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE733111720355D0064191C /* bgGreen.png */; };
+		0FE733141720355D0064191C /* bgGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE733121720355D0064191C /* bgGreen@2x.png */; };
+		0FE7331617203C5F0064191C /* HRChooseLangues_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7331517203C5E0064191C /* HRChooseLangues_iphone5.xib */; };
+		0FE7331917203D890064191C /* bgLangguage.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7331717203D890064191C /* bgLangguage.png */; };
+		0FE7331A17203D890064191C /* bgLangguage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7331817203D890064191C /* bgLangguage@2x.png */; };
+		0FE7331C172041C20064191C /* HRChooseVersion_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FE7331B172041C10064191C /* HRChooseVersion_iphone5.xib */; };
 		8C6308D1171531850075362F /* Animal.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C6308D0171531850075362F /* Animal.plist */; };
 		8C6F58851716CC0E002CA39F /* UIAlertView+error.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F58841716CC0E002CA39F /* UIAlertView+error.m */; };
-		8C6F588A1716CDE5002CA39F /* HRFactsDecreptions_iphone5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6F58891716CDE4002CA39F /* HRFactsDecreptions_iphone5.xib */; };
 		8C6F588D1716CF79002CA39F /* HRViewVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F588C1716CF79002CA39F /* HRViewVideo.m */; };
 		8CA1F50A1715744F002BF0E9 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1F5031715744F002BF0E9 /* MBProgressHUD.m */; };
 		8CA1F50B1715744F002BF0E9 /* MKStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CA1F5051715744F002BF0E9 /* MKStoreManager.m */; };
@@ -633,8 +639,6 @@
 		0FADEA08171308CD00FB3842 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0FADEA0A171308D100FB3842 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0FADEA0B171308D200FB3842 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		0FAEF674171D85DA001FA042 /* HRChooseLangues_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRChooseLangues_iphone5.xib; sourceTree = "<group>"; };
-		0FAEF676171D88AD001FA042 /* HRChooseVersion_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRChooseVersion_iphone5.xib; sourceTree = "<group>"; };
 		0FAEF678171D8EBC001FA042 /* btn_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_red.png; sourceTree = "<group>"; };
 		0FAEF679171D8EBC001FA042 /* iconAudio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconAudio.png; sourceTree = "<group>"; };
 		0FAEF67A171D8EBC001FA042 /* iconVideo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconVideo.png; sourceTree = "<group>"; };
@@ -677,12 +681,20 @@
 		0FB9994E171DAA8600AAD14B /* playvideoBgHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playvideoBgHeader@2x.png"; sourceTree = "<group>"; };
 		0FB99953171DADAF00AAD14B /* playvideoLadscapeBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playvideoLadscapeBg.png; sourceTree = "<group>"; };
 		0FB99954171DADAF00AAD14B /* playvideoLadscapeBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playvideoLadscapeBg@2x.png"; sourceTree = "<group>"; };
+		0FE7330B17202C130064191C /* HRFactsDecreptions_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRFactsDecreptions_iphone5.xib; sourceTree = "<group>"; };
+		0FE7330D17202E510064191C /* btnRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnRed.png; sourceTree = "<group>"; };
+		0FE7330E17202E510064191C /* btnRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnRed@2x.png"; sourceTree = "<group>"; };
+		0FE733111720355D0064191C /* bgGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgGreen.png; sourceTree = "<group>"; };
+		0FE733121720355D0064191C /* bgGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgGreen@2x.png"; sourceTree = "<group>"; };
+		0FE7331517203C5E0064191C /* HRChooseLangues_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRChooseLangues_iphone5.xib; sourceTree = "<group>"; };
+		0FE7331717203D890064191C /* bgLangguage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgLangguage.png; sourceTree = "<group>"; };
+		0FE7331817203D890064191C /* bgLangguage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgLangguage@2x.png"; sourceTree = "<group>"; };
+		0FE7331B172041C10064191C /* HRChooseVersion_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRChooseVersion_iphone5.xib; sourceTree = "<group>"; };
 		8C1121C117166D3F0091E2DE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8C1121C217166D400091E2DE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; lineEnding = 0; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8C6308D0171531850075362F /* Animal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Animal.plist; sourceTree = "<group>"; };
 		8C6F58831716CC0E002CA39F /* UIAlertView+error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+error.h"; sourceTree = "<group>"; };
 		8C6F58841716CC0E002CA39F /* UIAlertView+error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+error.m"; sourceTree = "<group>"; };
-		8C6F58891716CDE4002CA39F /* HRFactsDecreptions_iphone5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HRFactsDecreptions_iphone5.xib; sourceTree = "<group>"; };
 		8C6F588B1716CF79002CA39F /* HRViewVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRViewVideo.h; sourceTree = "<group>"; };
 		8C6F588C1716CF79002CA39F /* HRViewVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRViewVideo.m; sourceTree = "<group>"; };
 		8CA1F5021715744F002BF0E9 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -1066,11 +1078,11 @@
 				0FADE9E31712FCA700FB3842 /* HRChooseLangues.h */,
 				0FADE9E41712FCA700FB3842 /* HRChooseLangues.m */,
 				0FADE9E51712FCA700FB3842 /* HRChooseLangues.xib */,
-				0FAEF674171D85DA001FA042 /* HRChooseLangues_iphone5.xib */,
+				0FE7331517203C5E0064191C /* HRChooseLangues_iphone5.xib */,
 				8CF830821713EEC400741090 /* HRChooseVersion.h */,
 				8CF830831713EEC400741090 /* HRChooseVersion.m */,
 				8CF830841713EEC500741090 /* HRChooseVersion.xib */,
-				0FAEF676171D88AD001FA042 /* HRChooseVersion_iphone5.xib */,
+				0FE7331B172041C10064191C /* HRChooseVersion_iphone5.xib */,
 				8CF830931713F64700741090 /* HRVideoFactsSection.h */,
 				8CF830941713F64700741090 /* HRVideoFactsSection.m */,
 				8CF830951713F64700741090 /* HRVideoFactsSection.xib */,
@@ -1090,7 +1102,7 @@
 				0F9285371715999900BA4399 /* HRFactsDecreptions.h */,
 				0F9285381715999900BA4399 /* HRFactsDecreptions.m */,
 				0F9285391715999900BA4399 /* HRFactsDecreptions.xib */,
-				8C6F58891716CDE4002CA39F /* HRFactsDecreptions_iphone5.xib */,
+				0FE7330B17202C130064191C /* HRFactsDecreptions_iphone5.xib */,
 				0F9CF13817184618007BCC46 /* HRSplashView.h */,
 				0F9CF13917184618007BCC46 /* HRSplashView.m */,
 				0F9CF13A17184618007BCC46 /* HRSplashView.xib */,
@@ -1115,6 +1127,12 @@
 			children = (
 				0F9285461715A16500BA4399 /* Animal */,
 				0F9CF13E17184937007BCC46 /* iconScreenLeft.png */,
+				0FE733111720355D0064191C /* bgGreen.png */,
+				0FE733121720355D0064191C /* bgGreen@2x.png */,
+				0FE7330D17202E510064191C /* btnRed.png */,
+				0FE7330E17202E510064191C /* btnRed@2x.png */,
+				0FE7331717203D890064191C /* bgLangguage.png */,
+				0FE7331817203D890064191C /* bgLangguage@2x.png */,
 				0FB8C531171F123000C723C8 /* nextBtn.png */,
 				0FB8C532171F123100C723C8 /* preBtn.png */,
 				0FB8C533171F123100C723C8 /* nextBtn@2x.png */,
@@ -1471,7 +1489,6 @@
 				0F92861C1715A16500BA4399 /* Wolf.png in Resources */,
 				0F92861D1715A16500BA4399 /* Woodpecker.png in Resources */,
 				0F92861E1715A16500BA4399 /* Zebra.png in Resources */,
-				8C6F588A1716CDE5002CA39F /* HRFactsDecreptions_iphone5.xib in Resources */,
 				0F111EB81716F29D00D2B572 /* Alligator.mp3 in Resources */,
 				0F111EB91716F29D00D2B572 /* Ant.mp3 in Resources */,
 				0F111EBA1716F29D00D2B572 /* Baboon.mp3 in Resources */,
@@ -1588,8 +1605,6 @@
 				0F9CF14817184937007BCC46 /* iconScreenRight@2x.png in Resources */,
 				0F9CF14917184937007BCC46 /* logo@2x.png in Resources */,
 				0F9CF14B17185220007BCC46 /* BAMBINA_.TTF in Resources */,
-				0FAEF675171D85DA001FA042 /* HRChooseLangues_iphone5.xib in Resources */,
-				0FAEF677171D88AD001FA042 /* HRChooseVersion_iphone5.xib in Resources */,
 				0FAEF680171D8EBC001FA042 /* btn_red.png in Resources */,
 				0FAEF681171D8EBC001FA042 /* iconAudio.png in Resources */,
 				0FAEF682171D8EBC001FA042 /* iconVideo.png in Resources */,
@@ -1638,6 +1653,15 @@
 				0FB8C538171F123200C723C8 /* preBtn@2x.png in Resources */,
 				0FB8C53F171F13DB00C723C8 /* nextBtnRed.png in Resources */,
 				0FB8C540171F13DB00C723C8 /* nextBtnRed@2x.png in Resources */,
+				0FE7330C17202C130064191C /* HRFactsDecreptions_iphone5.xib in Resources */,
+				0FE7330F17202E510064191C /* btnRed.png in Resources */,
+				0FE7331017202E510064191C /* btnRed@2x.png in Resources */,
+				0FE733131720355D0064191C /* bgGreen.png in Resources */,
+				0FE733141720355D0064191C /* bgGreen@2x.png in Resources */,
+				0FE7331617203C5F0064191C /* HRChooseLangues_iphone5.xib in Resources */,
+				0FE7331917203D890064191C /* bgLangguage.png in Resources */,
+				0FE7331A17203D890064191C /* bgLangguage@2x.png in Resources */,
+				0FE7331C172041C20064191C /* HRChooseVersion_iphone5.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

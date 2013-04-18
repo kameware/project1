@@ -27,8 +27,8 @@
     self.titleOutlet.textAlignment=UITextAlignmentCenter;
     titleOutlet.text=text;
     titleOutlet.textColor=[UIColor whiteColor];
-    titleOutlet.strokeColor=[UIColor colorWithRed:0.0 green:153/255.0 blue:64/255.0 alpha:1];
-    titleOutlet.strokeSize=2;
+//    titleOutlet.strokeColor=[UIColor colorWithRed:0.0 green:153/255.0 blue:64/255.0 alpha:1];
+//    titleOutlet.strokeSize=2;
     titleOutlet.font=[UIFont boldSystemFontOfSize:17];
 }
 -(void)dealloc{
