@@ -38,6 +38,7 @@
 				<int key="NSvFlags">292</int>
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -179,6 +180,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{0, 326}, {320, 155}}</string>
 						<reference key="NSSuperview" ref="283498482"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -210,7 +212,7 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage" id="811828327">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">btnBackRed.png</string>
 						</object>
@@ -254,30 +256,6 @@
 							<string key="NSResourceName">playvideoLadscapeBg.png</string>
 						</object>
 					</object>
-					<object class="IBUIButton" id="557284454">
-						<reference key="NSNextResponder" ref="611134532"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{32, 6}, {41, 31}}</string>
-						<reference key="NSSuperview" ref="611134532"/>
-						<reference key="NSNextKeyView" ref="385899333"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIHighlightedTitleColor" ref="438171648"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="987722893"/>
-						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">btn_back.png</string>
-						</object>
-						<reference key="IBUIFontDescription" ref="21052768"/>
-						<reference key="IBUIFont" ref="298914969"/>
-					</object>
 					<object class="IBUIView" id="385899333">
 						<reference key="NSNextResponder" ref="611134532"/>
 						<int key="NSvFlags">292</int>
@@ -301,6 +279,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{83, 38}, {204, 28}}</string>
 								<reference key="NSSuperview" ref="385899333"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -327,6 +306,27 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="995994079"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					</object>
+					<object class="IBUIButton" id="557284454">
+						<reference key="NSNextResponder" ref="611134532"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{20, 20}, {41, 31}}</string>
+						<reference key="NSSuperview" ref="611134532"/>
+						<reference key="NSNextKeyView" ref="385899333"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIHighlightedTitleColor" ref="438171648"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="987722893"/>
+						<reference key="IBUINormalBackgroundImage" ref="811828327"/>
+						<reference key="IBUIFontDescription" ref="21052768"/>
+						<reference key="IBUIFont" ref="298914969"/>
 					</object>
 				</array>
 				<string key="NSFrameSize">{480, 320}</string>
@@ -472,8 +472,8 @@
 						<reference key="object" ref="611134532"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="15609650"/>
-							<reference ref="557284454"/>
 							<reference ref="385899333"/>
+							<reference ref="557284454"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -535,13 +535,11 @@
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="10.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="11.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="14.CustomClassName">HRBackgroundVideoView</string>
 				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="16.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="19.CustomClassName">HRViewVideo</string>
 				<string key="19.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="21.CustomClassName">HRBackgroundVideoView</string>
 				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="22.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="23.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -571,7 +569,6 @@
 			<string key="bgScreenVideoLadscape.png">{337, 212}</string>
 			<string key="bgScreenVideoPortrat.png">{210, 218}</string>
 			<string key="btnBackRed.png">{54, 40}</string>
-			<string key="btn_back.png">{37, 26}</string>
 			<string key="playVideoBgFooter.png">{320, 155}</string>
 			<string key="playvideoBgHeader.png">{320, 98}</string>
 			<string key="playvideoLadscapeBg.png">{477, 320}</string>

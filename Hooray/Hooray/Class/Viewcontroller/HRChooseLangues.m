@@ -98,7 +98,7 @@
 
 - (IBAction)chooseAlangPress:(id)sender {
     //set array 10 language you want, I copy english and arabic
-    NSArray *arrLanguage=[[NSArray alloc] initWithObjects:@"en",@"ar",@"ru",@"ar",@"en",@"ar",@"en",@"ar",@"en",@"ar",  nil];
+    NSArray *arrLanguage=[[NSArray alloc] initWithObjects:@"en",@"ar",@"en",@"ar",@"en",@"ar",@"en",@"ar",@"en",@"ar",  nil];
     [[LocalizationSystem sharedLocalSystem] setLanguage:[arrLanguage objectAtIndex:[sender tag]-1]];
     NSString *theLanguage=[NSString stringWithFormat:@"LANG_%d",[sender tag]];
     _selectLanguageLabel.text=AMLocalizedString(theLanguage, nil);
