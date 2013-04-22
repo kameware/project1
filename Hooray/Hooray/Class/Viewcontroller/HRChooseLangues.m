@@ -46,6 +46,7 @@
         [self setUptext];
 }
 -(void)setUptext{
+    
     _langugueLabel.font=[UIFont fontWithName:@"junegull" size:25];
     _langugueLabel.text = AMLocalizedString(@"LANGUAGE", nil);
     
@@ -66,7 +67,6 @@
         btn.titleOutlet.alpha=0.8;
         btn.titleOutlet.strokeColor=[UIColor clearColor];
     }
-
 }
 - (void)didReceiveMemoryWarning
 {
@@ -100,6 +100,7 @@
     //set array 10 language you want, I copy english and arabic
     NSArray *arrLanguage=[[NSArray alloc] initWithObjects:@"en",@"ar",@"en",@"ar",@"en",@"ar",@"en",@"ar",@"en",@"ar",  nil];
     [[LocalizationSystem sharedLocalSystem] setLanguage:[arrLanguage objectAtIndex:[sender tag]-1]];
+    [arrLanguage release];
     NSString *theLanguage=[NSString stringWithFormat:@"LANG_%d",[sender tag]];
     _selectLanguageLabel.text=AMLocalizedString(theLanguage, nil);
     //goto choose version

@@ -13,6 +13,7 @@
 #import <QuartzCore/QuartzCore.h>
 @interface HRFactsCategory ()
 {
+    BOOL isEng;
 }
 @end
 
@@ -36,6 +37,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if (![[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0] isEqualToString:@"en"]) {
+        isEng=NO;
+    }else{
+        isEng=YES;
+    }
     _tableVIew.layer.cornerRadius=4;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cacheDirectory = [paths objectAtIndex:0];
@@ -84,6 +90,9 @@
 
 - (void)dealloc {
     [_tableVIew release];
+    [allKey release];allKey=nil;
+    [allSection release];allSection=nil;
+    [listAnimals release];listAnimals=nil;
     [super dealloc];
 }
 - (void)viewDidUnload {
@@ -128,11 +137,12 @@
     
     // Configure the cell...
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] init] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+    }
         //add dot right of animal name
         NSString *nameAnimal=@"• ";
         nameAnimal=[nameAnimal stringByAppendingString:[[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row]];
-        if (![[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0] isEqualToString:@"en"]) {
+        if (!isEng) {
             NSString *animalforLang=AMLocalizedString([[allSection objectForKey:[allKey objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row],nil);
             nameAnimal=[nameAnimal stringByAppendingFormat:@"(%@)",animalforLang];
         }
@@ -150,7 +160,6 @@
             cell.userInteractionEnabled=NO;
             cell.textLabel.textColor=[UIColor grayColor];
         }
-    }
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -89,7 +89,8 @@
     [_nextLabel release];
     [_faceNumLabel release];
     [AnimalPlayer release];AnimalPlayer=nil;
-
+    [listAnimal release];
+    [listfacts release];
     [super dealloc];
 }
 - (void)viewDidUnload {

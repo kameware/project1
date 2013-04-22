@@ -45,7 +45,8 @@
         [fm copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"Animal" ofType:@"plist"] toPath:filePath error:nil];
     }
     [fm release];
-    //test purchased
+    //IN-APP PURCHASE
+    //comment 2 line below to enable in-app purchased
     [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"purchased"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     self.viewController = [[[HRChooseLangues alloc] initWithNibName:@"HRChooseLangues" bundle:nil] autorelease];
