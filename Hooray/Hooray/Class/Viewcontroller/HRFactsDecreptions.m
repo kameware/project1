@@ -24,7 +24,7 @@
     NSError * error;
     AVAudioPlayer * player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     if (!player) {
-        NSLog(@"Error loading %@: %@", url, error.localizedDescription);
+//        NSLog(@"Error loading %@: %@", url, error.localizedDescription);
     } else {
         [player prepareToPlay];
     }
@@ -89,8 +89,8 @@
     [_nextLabel release];
     [_faceNumLabel release];
     [AnimalPlayer release];AnimalPlayer=nil;
-    [listAnimal release];
-    [listfacts release];
+    [listAnimal release];listfacts=nil;
+    [listfacts release];listAnimal=nil;
     [super dealloc];
 }
 - (void)viewDidUnload {
